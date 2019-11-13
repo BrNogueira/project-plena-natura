@@ -1968,7 +1968,9 @@
 
     <script>
     $('.button-shop').on('click', function(){
-        window.location.href = url('/carrinho');
+        window.location.replace('/carrinho')
+
+        //window.location.href ='/carrinho';
     })
     </script>
      @yield('scripts')
