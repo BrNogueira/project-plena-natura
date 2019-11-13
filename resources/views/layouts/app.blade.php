@@ -227,7 +227,7 @@
                     <div class="pad">
                         <h1>
                             <a href="#" title="Plena Natura - Cosméticos Naturais">
-                                <img src="assets('images/plena-natura-cosmeticos-naturais.jpg')" alt="Plena Natura - Cosméticos Naturais">
+                                <img src="images/plena-natura-cosmeticos-naturais.jpg" alt="Plena Natura - Cosméticos Naturais">
                             </a>
                         </h1>
                         <div class="menu-icon closed">
@@ -1905,15 +1905,11 @@
                             <h3>
                                 Formas de Pagamento
                             </h3>
-                            <img src="assets('images/formas-de-pagamento.jpg')" alt="Formas de Pagamento">
+                            <img src="images/formas-de-pagamento.jpg" alt="Formas de Pagamento">
                         </div>
-
-
-
-
                     </div>
                     <div class="sign">
-                        <img src="sassets('images/plena-natura-cosmeticos-naturais-footer.jpg')" alt="Plena Natura Cosméticos Naturais">
+                        <img src="images/plena-natura-cosmeticos-naturais-footer.jpg" alt="Plena Natura Cosméticos Naturais">
                         <div class="info">
                             <strong>PLENA NATURA - COSMETICOS E PRODUTOS NATURAIS ME</strong> - CNPJ 04.393.814/0001-94  - Rua Benedito Franco, 253 Jd. Nova Esperança - Campinas - SP  CEP 13058-485<br>
                             Ofertas válidas enquanto durarem nossos estoques | Vendas sujeitas a análise e confirmação de dados pela empresa. © Direitos Reservados plenanatura.com.br
@@ -1972,7 +1968,7 @@
 
     <script>
     $('.button-shop').on('click', function(){
-        window.location.href = '/carrinho';
+        window.location.href = url('/carrinho');
     })
     </script>
      @yield('scripts')
