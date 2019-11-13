@@ -87,7 +87,6 @@ a:hover{
 }
 
 img{
-    width: 100%;
     border: none;
 }
 /* home */
@@ -1667,6 +1666,11 @@ form label input{
     height: 70px;
     margin: 10px 0;
 }
+
+.container-miolo .marcas-carrousel .cliente img{
+    border: none;
+}
+
 .container-miolo .marcas-carrousel .pad{
     padding: 0 50px;
 }

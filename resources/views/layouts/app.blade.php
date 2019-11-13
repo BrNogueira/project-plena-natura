@@ -226,8 +226,8 @@
                 <div class="wrapper">
                     <div class="pad">
                         <h1>
-                            <a href="index.html" title="Plena Natura - Cosméticos Naturais">
-                                <img src="images/plena-natura-cosmeticos-naturais.jpg" alt="Plena Natura - Cosméticos Naturais">
+                            <a href="#" title="Plena Natura - Cosméticos Naturais">
+                                <img src="assets('images/plena-natura-cosmeticos-naturais.jpg')" alt="Plena Natura - Cosméticos Naturais">
                             </a>
                         </h1>
                         <div class="menu-icon closed">
@@ -254,7 +254,7 @@
                                 $total = $p->price;
                                 @endphp
                                     <li data-id='{{$p->id}}'>
-                                        <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
+                                        <img src="{{asset('$p->image')}}" alt="Nome do Produto">
                                         <div class="desc">
                                             <strong>{{substr($p->name, 0, 15)}}</strong>
                                             <span>
@@ -270,7 +270,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <img src="images/produto.jpg" alt="Nome do Produto">
+                                        <img src="{{asset('$p->image')}}" alt="Nome do Produto">
                                         <div class="desc">
                                             <strong>Powerfit Ômega (...)</strong>
                                             <span>
@@ -296,7 +296,7 @@
                                 <strong>
                                     Subtotal <span>R${{money($total)}}</span>
                                 </strong>
-                                <a href="/carrinho" class="button-shop" title="Finalizar Compra">
+                                <a href="url('/carrinho')" class="button-shop" title="Finalizar Compra">
                                     Finalizar Comprar
                                 </a>
                             </div>
@@ -1905,7 +1905,7 @@
                             <h3>
                                 Formas de Pagamento
                             </h3>
-                            <img src="images/formas-de-pagamento.jpg" alt="Formas de Pagamento">
+                            <img src="assets('images/formas-de-pagamento.jpg')" alt="Formas de Pagamento">
                         </div>
 
 
@@ -1913,7 +1913,7 @@
 
                     </div>
                     <div class="sign">
-                        <img src="images/plena-natura-cosmeticos-naturais-footer.jpg" alt="Plena Natura Cosméticos Naturais">
+                        <img src="sassets('images/plena-natura-cosmeticos-naturais-footer.jpg')" alt="Plena Natura Cosméticos Naturais">
                         <div class="info">
                             <strong>PLENA NATURA - COSMETICOS E PRODUTOS NATURAIS ME</strong> - CNPJ 04.393.814/0001-94  - Rua Benedito Franco, 253 Jd. Nova Esperança - Campinas - SP  CEP 13058-485<br>
                             Ofertas válidas enquanto durarem nossos estoques | Vendas sujeitas a análise e confirmação de dados pela empresa. © Direitos Reservados plenanatura.com.br
