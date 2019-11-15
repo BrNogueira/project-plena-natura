@@ -311,37 +311,37 @@
                             <div class="mini-menu-user">
                                 <ul>
                                     <li>
-                                        <a href="meus-pedidos.html" title="Meus Pedidos">
+                                        <a href="meus-pedidos" title="Meus Pedidos">
                                             <i class="fa fa-truck" aria-hidden="true"></i>
                                             <span>Meus<br>Pedidos</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="meus-enderecos.html" title="Meus Endereços">
+                                        <a href="meus-enderecos" title="Meus Endereços">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Meus<br>Endereços</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="dados-pessoais.html" title="Dados Pessoais">
+                                        <a href="dados-pessoais" title="Dados Pessoais">
                                             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                                             <span>Dados<br>Pessoais</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="dados-cadastrais.html" title="Dados Cadastrais">
+                                        <a href="dados-cadastrais" title="Dados Cadastrais">
                                             <i class="fa fa-lock" aria-hidden="true"></i>
                                             <span>Dados<br>Cadastrais</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="minhas-avaliacoes.html" title="Minhas Avaliações">
+                                        <a href="minhas-avaliacoes" title="Minhas Avaliações">
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <span>Minhas<br>Avaliações</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="meus-vales.html" title="Meus Vales">
+                                        <a href="meus-vales" title="Meus Vales">
                                             <i class="fa fa-ticket" aria-hidden="true"></i>
                                             <span>Meus<br>Vales</span>
                                         </a>
@@ -392,7 +392,7 @@
                     <nav>
                         <ul>
                             <li class="marcas">
-                                <a href="lista-marcas.html" title="Marcas">
+                                <a href="lista-marcas" title="Marcas">
                                     Marcas
                                 </a>
                                 <div class="sub">
@@ -485,7 +485,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="marcas.html" title="Marcas - Clique e confira nossa linha">
+                                        <a href="marcas" title="Marcas - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/marcas.jpg" alt="Marcas - Clique e confira nossa linha">
                                             </figure>
@@ -503,7 +503,7 @@
                                 </div>
                             </li>
                             <li class="saude">
-                                <a href="lista-categoria.html" title="Saúde">
+                                <a href="lista-categoria" title="Saúde">
                                     Saúde
                                 </a>
                                 <div class="sub">
@@ -596,7 +596,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Saúde - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Saúde - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/saude.jpg" alt="Saúde - Clique e confira nossa linha">
                                             </figure>
@@ -614,7 +614,7 @@
                                 </div>
                             </li>
                             <li class="cabelos">
-                                <a href="lista-categoria.html" title="Cabelos">
+                                <a href="lista-categoria" title="Cabelos">
                                     Cabelos
                                 </a>
                                 <div class="sub">
@@ -707,7 +707,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Cabelos - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Cabelos - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/cabelos.jpg" alt="Cabelos - Clique e confira nossa linha">
                                             </figure>
@@ -725,7 +725,7 @@
                                 </div>
                             </li>
                             <li class="rosto">
-                                <a href="lista-categoria.html" title="Rosto">
+                                <a href="lista-categoria" title="Rosto">
                                     Rosto
                                 </a>
                                 <div class="sub">
@@ -818,7 +818,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Rosto - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Rosto - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/rosto.jpg" alt="Rosto - Clique e confira nossa linha">
                                             </figure>
@@ -836,7 +836,7 @@
                                 </div>
                             </li>
                             <li class="corpo">
-                                <a href="lista-categoria.html" title="Corpo">
+                                <a href="lista-categoria" title="Corpo">
                                     Corpo
                                 </a>
                                 <div class="sub">
@@ -929,7 +929,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Corpo - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Corpo - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/corpo.jpg" alt="Corpo - Clique e confira nossa linha">
                                             </figure>
@@ -947,7 +947,7 @@
                                 </div>
                             </li>
                             <li class="maos">
-                                <a href="lista-categoria.html" title="Mãos">
+                                <a href="lista-categoria" title="Mãos">
                                     Mãos
                                 </a>
                                 <div class="sub">
@@ -1040,7 +1040,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Mãos - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Mãos - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/maos-e-unhas-menu.jpg" alt="Mãos - Clique e confira nossa linha">
                                             </figure>
@@ -1058,7 +1058,7 @@
                                 </div>
                             </li>
                             <li class="organicos">
-                                <a href="lista-categoria.html" title="Orgânicos">
+                                <a href="lista-categoria" title="Orgânicos">
                                     Orgânicos
                                 </a>
                                 <div class="sub">
@@ -1151,7 +1151,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Orgânicos - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Orgânicos - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/organicos.jpg" alt="Orgânicos - Clique e confira nossa linha">
                                             </figure>
@@ -1169,7 +1169,7 @@
                                 </div>
                             </li>
                             <li class="materias-primas">
-                                <a href="lista-categoria.html" title="Matérias-Primas">
+                                <a href="lista-categoria" title="Matérias-Primas">
                                     Matérias-Primas
                                 </a>
                                 <div class="sub">
@@ -1262,7 +1262,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Matérias-Primas - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Matérias-Primas - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/materias-primas.jpg" alt="Matérias-Primas - Clique e confira nossa linha">
                                             </figure>
@@ -1280,7 +1280,7 @@
                                 </div>
                             </li>
                             <li class="casa">
-                                <a href="lista-categoria.html" title="Casa">
+                                <a href="lista-categoria" title="Casa">
                                     Casa
                                 </a>
                                 <div class="sub">
@@ -1373,7 +1373,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Casa - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Casa - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/casa.jpg" alt="Casa - Clique e confira nossa linha">
                                             </figure>
@@ -1391,7 +1391,7 @@
                                 </div>
                             </li>
                             <li class="veganos">
-                                <a href="lista-categoria.html" title="Veganos">
+                                <a href="lista-categoria" title="Veganos">
                                     Veganos
                                 </a>
                                 <div class="sub">
@@ -1484,7 +1484,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Veganos - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Veganos - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/veganos.jpg" alt="Veganos - Clique e confira nossa linha">
                                             </figure>
@@ -1502,7 +1502,7 @@
                                 </div>
                             </li>
                             <li class="pet">
-                                <a href="lista-categoria.html" title="Pet">
+                                <a href="lista-categoria" title="Pet">
                                     Pet
                                 </a>
                                 <div class="sub">
@@ -1595,7 +1595,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Pet - Clique e confira nossa linha">
+                                        <a href="lista-categoria" title="Pet - Clique e confira nossa linha">
                                             <figure>
                                                 <img src="images/pet.jpg" alt="Pet - Clique e confira nossa linha">
                                             </figure>
@@ -1613,7 +1613,7 @@
                                 </div>
                             </li>
                             <li class="ofertas">
-                                <a href="lista-categoria.html" title="Ofertas">
+                                <a href="lista-categoria" title="Ofertas">
                                     Ofertas
                                 </a>
                                 <div class="sub">
@@ -1706,7 +1706,7 @@
                                         </ul>
                                     </div>
                                     <div class="col2">
-                                        <a href="lista-categoria.html" title="Ofertas - Clique e confira nossos produtos em oferta">
+                                        <a href="lista-categoria" title="Ofertas - Clique e confira nossos produtos em oferta">
                                             <figure>
                                                 <img src="images/ofertas.jpg" alt="Ofertas - Clique e confira nossos produtos em oferta">
                                             </figure>
@@ -1883,7 +1883,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://www.planalto.gov.br/ccivil_03/leis/L8078.htm" target="_blank" title="Código de Defesa do Consumidor">
+                                    <a href="http://www.planalto.gov.br/ccivil_03/leis/L8078" target="_blank" title="Código de Defesa do Consumidor">
                                         Código de Defesa do Consumidor
                                     </a>
                                 </li>

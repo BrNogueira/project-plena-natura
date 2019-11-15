@@ -2,9 +2,6 @@
 namespace App\Helpers;
 
 class SMS { 
-
-
-
     public static function sendCod($number, $cod){
         $smsOptions = \App\Setting::find(1);
         if($smsOptions->sms_on == true){

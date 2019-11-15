@@ -75,7 +75,6 @@ class CodController extends Controller
         }
         // Enviar e-mail para o usuário
 
-
         $data['is_valid']    = 0;
         $userValid           = UserCod::where('is_valid', 1)->where('user_email', $request->value)->update($data);
 

@@ -22,13 +22,15 @@ Route::get('/promocoes/emails', 'HomeController@showEmails');
 Route::post('key', 'Auth\CodController@sendEmailCod');
 Route::post('access/auth/cod','Auth\CodController@loginAccessKey');
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+Route::get('auth/{provider}/callback', 
+'Auth\AuthController@handleProviderCallback');
 
 // Produtos
 Route::get('/produto/{slug}', 'ProductsController@productView');
 Route::get('/categoria/{slug}', 'ProductsController@categoryView');
 Route::get('/search', 'ProductsController@searchProducts');
 Route::get('/carrinho', 'CartController@index');
+Route::post('/carrinho', 'CartController@index');
 
 Route::get('/identificacao', 'IdentificationController@index');
 

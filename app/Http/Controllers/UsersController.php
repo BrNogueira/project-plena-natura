@@ -41,9 +41,9 @@ class UsersController extends Controller
             $user =  User::find($id);
             $user->email = $request->newEmail;
             $user->save();
-            return redirect('/dados-cadastrais');
+            return redirect('users.registration-data');
         }else{
-            return redirect('/dados-cadastrais');
+            return redirect('users.registration-data');
         }
     }
 
@@ -52,6 +52,6 @@ class UsersController extends Controller
         $user =  User::find($id);
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect('/dados-cadastrais');
+        return redirect('users.registration-data');
     }
 }

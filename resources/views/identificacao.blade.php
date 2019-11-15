@@ -278,8 +278,6 @@
 
 </body>
 
-</section>
-
 @endsection
 
 
