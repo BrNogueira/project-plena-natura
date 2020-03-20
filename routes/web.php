@@ -37,7 +37,7 @@ Route::get('/identificacao', 'IdentificationController@index');
 
 //checkout
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
-// Route::get('/carrinho/checkout/pagamento', 'PayController@index')->name('payment.index');
+Route::get('/checkout/pagamento', 'MercadoPago@createPreferencePayment')->name('pagamento');
 
 Route::get('/recibo', 'ReciboController@index');
 

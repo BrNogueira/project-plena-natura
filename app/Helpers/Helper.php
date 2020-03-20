@@ -58,7 +58,7 @@ function getStamps(){
     return \App\Stamp::all();
 }
 //função buscar produtos no minicarrinho 
-    function miniCart() {
+function miniCart() {
     if(cartCount() > 0)
     foreach($products as $product)
     $p = product($product['product_id']);

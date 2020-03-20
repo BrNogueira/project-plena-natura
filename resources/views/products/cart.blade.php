@@ -33,7 +33,7 @@
                     @php
                     $p = product($product['product_id']);
                     @endphp
-                    <tr data-id='{{$product['product_id']}}' data-price='{{$p->price}}' data-quantity='{{$product['quantity']}}'>
+                <tr data-id="{{$product['product_id']}}" data-price='{{$p->price}}' data-quantity="{{$product['quantity']}}">
                             <td>
                                 <img src="images/produto.jpg" alt="Nome do Produto">
                                 <span>{{$p->name}}</span>
@@ -149,9 +149,10 @@
                             </td>
                         </tr>
                     </table>
-                    <a href="{{ url('/identificacao') }}" title="Finalizar Pedido" class="btn">
+                    <a href="{{ url('/checkout/pagamento') }}" title="Finalizar Pedido" class="btn">
                         Finalizar Pedido
                     </a>
+                   
                     
                 </div>
             </div>

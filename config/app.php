@@ -161,7 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
-
+        MercadoPagoLaravel\Providers\MercadoPagoServiceProvider::class,
 
     ],
 
@@ -212,6 +212,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'MP' => MercadoPagoLaravel\Facades\MP::class,
     ],
 
 ];
