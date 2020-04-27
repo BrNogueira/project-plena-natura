@@ -15,7 +15,9 @@ class ProductsController extends Controller
 
         return view('products.view_product', $data);
     }
-    
+
+
+
     public function categoryView(Request $request, $categorySlug){
         $data['category']  = Category::where('slug', $categorySlug)->firstOrFail();
         // Verificação de ordenação e tratamento de erros
@@ -65,7 +67,7 @@ class ProductsController extends Controller
     }
 
 
-   // public function insertAll(){
+    public function insertAll(){
     //     var_dump(insertAll());
         
     //     $new_coupon = new \App\Coupon;
@@ -210,5 +212,5 @@ class ProductsController extends Controller
     //     $admin->password = \Hash::Make('123456');
     //     $admin->save();
     //     return 'show';
-    //  }
+    }
 }
