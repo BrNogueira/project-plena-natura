@@ -22,7 +22,7 @@ Route::get('/promocoes/emails', 'HomeController@showEmails');
 Route::post('key', 'Auth\CodController@sendEmailCod');
 Route::post('access/auth/cod','Auth\CodController@loginAccessKey');
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 
+Route::get('auth/{provider}/callback',
 'Auth\AuthController@handleProviderCallback');
 
 // Produtos
@@ -32,12 +32,15 @@ Route::get('/search', 'ProductsController@searchProducts');
 Route::get('/carrinho', 'CartController@index');
 Route::post('/carrinho', 'CartController@index');
 
+Route::post('/cart', 'CartController@addToCart');
+
 Route::get('/identificacao', 'IdentificationController@index');
 
 
 //checkout
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
-Route::get('/checkout/pagamento', 'MercadoPago@createPreferencePayment')->name('pagamento');
+Route::get('/checkout/pagamento', 'PaymentController@showCheckoutForm')->name('pagamento');
+Route::post('/checkout/pagamento/submit', 'PaymentController@submitPayment')->name('payment.submit');
 
 Route::get('/recibo', 'ReciboController@index');
 
@@ -125,7 +128,7 @@ Route::post('/alterarlink/{id}', 'HomeController@alterarLinks');
   Route::get('/fornecedores/json', 'Admin\BrandsController@storeJson');
   Route::get('/fornecedores/editar/{id}', 'Admin\BrandsController@editBrandForm');
   Route::post('/fornecedores/editar/{id}', 'Admin\BrandsController@edit');
-  
+
   Route::post('/fornecedores/editar', 'Admin\BrandsController@imageBrandsPost')->name('image.upload.post');
 
   Route::post('/fornecedores/delete', 'Admin\BrandsController@delete');

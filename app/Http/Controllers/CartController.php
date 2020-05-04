@@ -9,25 +9,26 @@ use App\Coupon;
 class CartController extends Controller
 {
     public function index(){
-        
+
         if(\Auth::guest()){
-            $data['products'] = (object) unserialize(\Cookie::get('cart'));
+//            $data['products'] = (object) unserialize(\Cookie::get('cart'));
+            $data['products'] = unserialize(\Cookie::get('cart'));
         }else{
             $data['products'] = Cart::where('user_id', \Auth::id())->get();
         }
         return view('products.cart', $data);
     }
-    
+
     public function addToCart(Request $request){
         if(\Auth::guest()){
-            
+
             $products = array();
 
             if(\Cookie::get('cart') != false){
                 $products = unserialize(\Cookie::get('cart'));
             }
             if(empty(array_keys(array_column($products,'product_id'), $request->product_id))){
-                $products[] = array('product_id' => $request->product_id, 
+                $products[] = array('product_id' => $request->product_id,
                                     'quantity' => 1);
             }else{
                 $id = array_keys(array_column($products,'product_id'), $request->product_id);
@@ -39,19 +40,19 @@ class CartController extends Controller
             $check = Cart::where('product_id', $request->product_id)->where('user_id', \Auth::id())->first();
             if($check){
                 $cart = Cart::find($check->id);
-                $cart->quantity = $cart->quantity + 1; 
-                $cart->save(); 
+                $cart->quantity = $cart->quantity + 1;
+                $cart->save();
             }else{
                 $cart = new Cart;
                 $cart->user_id    = \Auth::id();
                 $cart->product_id = $request->product_id;
-                $cart->quantity = 1; 
-                $cart->save(); 
+                $cart->quantity = 1;
+                $cart->save();
             }
-            return redirect('/carrinho'); 
+            return redirect('/carrinho');
         }
     }
-    
+
     public function removeFromCart(Request $request){
         if(\Auth::guest()){
             $products = array();
@@ -61,7 +62,7 @@ class CartController extends Controller
             $key = array_search($request->product_id, array_column($products,'product_id'));
             if(!empty($key) or $key == 0){
                 unset($products[$key]);
-                
+
                 \Cookie::queue('cart', serialize($products), 172800);
                 return response()->json(array("success" => true));
             }else{
@@ -91,11 +92,11 @@ class CartController extends Controller
         $cepOrigem  = '13058-971';
         $cepDestino = $request->cep;
         $curl = curl_init();
-        
+
         curl_setopt_array($curl, array(
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
-                'x-api-key:  YKmJ1ImOOF2SxLNGNFvIS3KBWf8jUCTgGmt9zKg7',  
+                'x-api-key:  YKmJ1ImOOF2SxLNGNFvIS3KBWf8jUCTgGmt9zKg7',
             ),
             CURLOPT_URL => "https://api.kcep.run/".$cepOrigem."/".$cepDestino."/16/11/2/1" ,
             CURLOPT_RETURNTRANSFER => true,

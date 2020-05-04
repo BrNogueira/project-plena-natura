@@ -9,7 +9,7 @@
             <li>
                 <a href="#" target="_blank" title="Facebook">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>    
+                </a>
             </li>
             <li>
                 <a href="#" target="_blank" title="Twitter">
@@ -41,7 +41,7 @@
                     A Plena Natura oferece frete grátis para as compras acima de R$99,90 com algumas excessões.<br><br>
                     Na página de pagamento você poderá ver se há ou não a opção de frete grátis de acordo com o CEP de entrega e os produtos escolhidos. <a href="fretes-e-prazos.html" target="_blank" title="Saiba mais">Saiba mais</a>
                 </p>
-                
+
             </div>
             <div class="frete-cart">
                 <div class="close">
@@ -51,7 +51,7 @@
                     <thead>
                         <tr>
                             <td>
-                                
+
                             </td>
                             <td>
                                 Entrega em:
@@ -60,7 +60,7 @@
                                 Valor
                             </td>
                             <td>
-                                
+
                             </td>
                         </tr>
                     </thead>
@@ -169,7 +169,7 @@
                         <ul class="timeline">
                             <li class="checked">
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Carrinho
@@ -177,7 +177,7 @@
                             </li>
                             <li class="checked">
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Identificação
@@ -185,7 +185,7 @@
                             </li>
                             <li class="checked last">
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Checkout
@@ -193,7 +193,7 @@
                             </li>
                             <li>
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Recibo
@@ -222,63 +222,67 @@
                         Endereço e pagamento
                     </h2>
 
-                    <div class="steps">
+                    <form class="steps" id="pay">
                         <div class="col-checkout">
-                            <div class="tabela">
+                            <div class="tabela" id="customerInfo">
                                 <h3>
                                     1. Informações do Cliente
                                 </h3>
                                 <div class="body-table">
-                                    <form>
+                                    <div class="form-wrapper">
                                         <label>
                                             <span>
                                                 E-mail
                                             </span>
-                                            <input type="text">
+                                            <input type="email" name="email" id="email" required>
                                         </label>
                                         <label>
                                             <span>
                                                 Senha
                                             </span>
-                                            <input type="text">
+                                            <input type="password" id="password">
                                         </label>
                                         <label>
                                             <span>
                                                 Confirmar
                                             </span>
-                                            <input type="text">
+                                            <input type="password" id="confirmPassword">
                                         </label>
                                         <label>
                                             <span>
                                                 CPF
                                             </span>
-                                            <input type="text">
+                                            <input type="text" id="docNumber" data-checkout="docNumber" required>
                                         </label>
+{{--                                        <label for="docType">--}}
+{{--                                            <span>Tipo de Documento</span>--}}
+{{--                                            <select id="docType" data-checkout="docType"></select>--}}
+{{--                                        </label>--}}
                                         <label>
                                             <span>
                                                 Nome
                                             </span>
-                                            <input type="text">
+                                            <input type="text" id="first_name" name="first_name" required>
                                         </label>
                                         <label>
                                             <span>
                                                 Sobrenome
                                             </span>
-                                            <input type="text">
+                                            <input type="text" id="last_name" name="last_name" required>
                                         </label>
                                         <label>
                                             <span>
                                                 Nascimento
                                             </span>
-                                            <input type="text">
+                                            <input type="text" id="birth_date" name="birth_date" required>
                                         </label>
                                         <label>
                                             <span>
                                                 Sexo
                                             </span>
-                                            <input type="text">
+                                            <input type="text" id="gender" name="gender">
                                         </label>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
 
@@ -289,7 +293,7 @@
                                     2. Endereço de Entrega
                                 </h3>
                                 <div class="body-table">
-                                    <form>
+                                    <div class="form-wrapper">
                                         <label>
                                             <span>
                                                 Rua
@@ -330,15 +334,15 @@
                                             <span>
                                                 Telefone
                                             </span>
-                                            <input type="text">
+                                            <input type="text" name="phone" id="phone">
                                         </label>
                                         <label>
                                             <span>
                                                 Celular
                                             </span>
-                                            <input type="text">
+                                            <input type="text" name="cel" id="cel">
                                         </label>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +354,7 @@
                                     3. Opções de Entrega
                                 </h3>
                                 <div class="body-table">
-                                    <form>
+                                    <div class="form-wrapper">
                                         <label class="select">
                                             <input name="frete" type="radio">
                                             <strong>Grátis</strong>
@@ -416,7 +420,7 @@
                                             Frete grátis: Compras acima de R$ 99,90. <a href="#" id="rule">Confira a regra.</a><br><br>
                                             O pedido será liberado somente após a aprovação do pagamento
                                         </em>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
 
@@ -427,155 +431,218 @@
                                     4. Formas de Pagamento
                                 </h3>
                                 <div class="body-table">
-                                    <form>
-                                        <label class="select">
-                                            <input name="pagamento" type="radio">
-                                            <strong>Débito em conta</strong>
-                                            <div class="info-label">
-                                                <label class="select">
-                                                    <input name="debito" type="radio">
-                                                    <img src="images/cc/caixa.jpg" alt="Caixa">
-                                                </label>
-                                                <label class="select">
-                                                    <input name="debito" type="radio">
-                                                    <img src="images/cc/bradesco.jpg" alt="Bradesco">
-                                                </label>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="pagamento" type="radio">
-                                            <strong>Boleto Bancário</strong>
-                                            <div class="info-label">
-                                                <ul>
-                                                    <li>
-                                                        Pagamento somente à vista.
-                                                    </li>
-                                                    <li>
-                                                        O boleto vence em 3 dias.
-                                                    </li>
-                                                    <li>
-                                                        É necessário imprimir o boleto ou utilizar o código de barras do mesmo para fazer o pagamento.
-                                                    </li>
-                                                    <li>
-                                                        Imprima o boleto após a finalização da compra.
-                                                    </li>
-                                                    <li>
-                                                        O boleto não será enviado para o seu endereço físico.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="pagamento" type="radio">
-                                            <strong>Mercado Pago</strong>
-                                            <div class="info-label">
-                                                <p>
-                                                    Finalize sua compra com MercadoPago. É muito simples e seguro:
-                                                </p>
-                                                <ul>
-                                                    <li>
-                                                         Finalize a compra.
-                                                    </li>
-                                                    <li>
-                                                        Selecione seu meio de pagamento preferido.
-                                                    </li>
-                                                    <li>
-                                                       Confirme o pagamento.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="pagamento" type="radio">
+                                    <div class="form-wrapper">
+{{--                                        <label class="select">--}}
+{{--                                            <input name="pagamento" type="radio">--}}
+{{--                                            <strong>Débito em conta</strong>--}}
+{{--                                            <div class="info-label">--}}
+{{--                                                <label class="select">--}}
+{{--                                                    <input name="debito" type="radio">--}}
+{{--                                                    <img src="images/cc/caixa.jpg" alt="Caixa">--}}
+{{--                                                </label>--}}
+{{--                                                <label class="select">--}}
+{{--                                                    <input name="debito" type="radio">--}}
+{{--                                                    <img src="images/cc/bradesco.jpg" alt="Bradesco">--}}
+{{--                                                </label>--}}
+{{--                                                <p>--}}
+{{--                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </label>--}}
+{{--                                        <label class="select">--}}
+{{--                                            <input name="pagamento" type="radio">--}}
+{{--                                            <strong>Boleto Bancário</strong>--}}
+{{--                                            <div class="info-label">--}}
+{{--                                                <ul>--}}
+{{--                                                    <li>--}}
+{{--                                                        Pagamento somente à vista.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        O boleto vence em 3 dias.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        É necessário imprimir o boleto ou utilizar o código de barras do mesmo para fazer o pagamento.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        Imprima o boleto após a finalização da compra.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        O boleto não será enviado para o seu endereço físico.--}}
+{{--                                                    </li>--}}
+{{--                                                </ul>--}}
+{{--                                            </div>--}}
+{{--                                        </label>--}}
+{{--                                        <label class="select outros">--}}
+{{--                                            <input name="pagamento" type="radio" checked>--}}
+{{--                                            <strong>Mercado Pago</strong>--}}
+{{--                                            <div class="info-label">--}}
+{{--                                                <p>--}}
+{{--                                                    Finalize sua compra com MercadoPago. É muito simples e seguro:--}}
+{{--                                                </p>--}}
+{{--                                                <ul>--}}
+{{--                                                    <li>--}}
+{{--                                                         Finalize a compra.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        Selecione seu meio de pagamento preferido.--}}
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                       Confirme o pagamento.--}}
+{{--                                                    </li>--}}
+{{--                                                </ul>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="info-label">--}}
+{{--                                                <div class="form">--}}
+{{--                                                    <label>--}}
+{{--                                                            <span>--}}
+{{--                                                                N<sup>o</sup> do Cartão--}}
+{{--                                                            </span>--}}
+{{--                                                        <input type="text">--}}
+{{--                                                    </label>--}}
+{{--                                                    <label>--}}
+{{--                                                            <span>--}}
+{{--                                                                N<sup>o</sup> de Parcelas--}}
+{{--                                                            </span>--}}
+{{--                                                        <select>--}}
+{{--                                                            <option>1x de R$400,00</option>--}}
+{{--                                                            <option>2x de R$200,00</option>--}}
+{{--                                                            <option>3x de R$150,00</option>--}}
+{{--                                                        </select>--}}
+{{--                                                    </label>--}}
+{{--                                                    <label>--}}
+{{--                                                            <span class="l2">--}}
+{{--                                                               Seu nome<br><small>(como no cartão)</small>--}}
+{{--                                                            </span>--}}
+{{--                                                        <input type="text">--}}
+{{--                                                    </label>--}}
+{{--                                                    <label>--}}
+{{--                                                            <span>--}}
+{{--                                                                Vencimento--}}
+{{--                                                            </span>--}}
+{{--                                                        <div class="fl">--}}
+{{--                                                            <select>--}}
+{{--                                                                <option>Mês</option>--}}
+{{--                                                            </select>--}}
+{{--                                                            <select>--}}
+{{--                                                                <option>Ano</option>--}}
+{{--                                                            </select>--}}
+
+{{--                                                        </div>--}}
+{{--                                                    </label>--}}
+{{--                                                    <label>--}}
+{{--                                                            <span>--}}
+{{--                                                               Cód. de Segurança--}}
+{{--                                                            </span>--}}
+{{--                                                        <input type="text">--}}
+{{--                                                    </label>--}}
+{{--                                                    <label class="select">--}}
+{{--                                                        <input type="checkbox"> <span>Salvar cartão para próxima compra</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <label class="select">--}}
+{{--                                                        <input type="checkbox"> <span>Tornar padrão para a próxima compra</span>--}}
+{{--                                                    </label>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </label>--}}
+                                        <label class="select open">
+                                            <input name="pagamento" type="radio" checked>
                                             <strong>Cartão de Crédito</strong>
                                             <div class="info-label">
-                                                <label class="select cc">
-                                                    <input name="cc" type="radio">
-                                                    <img src="images/cc/amex.jpg" alt="Amex">
-                                                    <span>paulo s cardoso</span>
-                                                    <span>****.****.****.3988</span>
-                                                </label>
-                                                <label class="select cc">
-                                                    <input name="cc" type="radio">
-                                                    <img src="images/cc/mastercard.jpg" alt="Mastercad">
-                                                    <span>paulo s cardoso</span>
-                                                    <span>****.****.****.3988</span>
-                                                </label>
+{{--                                                <label class="select cc">--}}
+{{--                                                    <input name="cc" type="radio">--}}
+{{--                                                    <img src="images/cc/amex.jpg" alt="Amex">--}}
+{{--                                                    <span>paulo s cardoso</span>--}}
+{{--                                                    <span>****.****.****.3988</span>--}}
+{{--                                                </label>--}}
+{{--                                                <label class="select cc">--}}
+{{--                                                    <input name="cc" type="radio">--}}
+{{--                                                    <img src="images/cc/mastercard.jpg" alt="Mastercad">--}}
+{{--                                                    <span>paulo s cardoso</span>--}}
+{{--                                                    <span>****.****.****.3988</span>--}}
+{{--                                                </label>--}}
                                                 <label class="select outros">
-                                                    <input name="cc" type="radio">
-                                                    <span>Inserir novo cartão</span>
-                                                    <div class="form">
+{{--                                                    <input name="cc" type="radio">--}}
+{{--                                                    <span>Inserir novo cartão</span>--}}
+                                                    <div class="form open">
                                                         <label>
                                                             <span>
                                                                 N<sup>o</sup> do Cartão
                                                             </span>
-                                                            <input type="text">
+                                                            <input type="text" name="card_number" id="card_number" data-checkout="cardNumber">
                                                         </label>
                                                         <label>
                                                             <span>
                                                                 N<sup>o</sup> de Parcelas
                                                             </span>
-                                                            <select>
-                                                                <option>1x de R$400,00</option>
-                                                                <option>2x de R$200,00</option>
-                                                                <option>3x de R$150,00</option>
+
+                                                            <select name="installments" id="installments">
                                                             </select>
                                                         </label>
                                                         <label>
                                                             <span class="l2">
                                                                Seu nome<br><small>(como no cartão)</small>
                                                             </span>
-                                                            <input type="text">
+                                                            <input type="text" name="card_name" id="card_name" data-checkout="cardholderName">
+{{--                                                            <input type="text" name="card_name" id="card_name" data-checkout="cardholderName"--}}
                                                         </label>
                                                         <label>
                                                             <span>
                                                                 Vencimento
                                                             </span>
                                                             <div class="fl">
-                                                                <select>
+                                                                <select name="card_month" id="card_month" data-checkout="cardExpirationMonth">
                                                                     <option>Mês</option>
+                                                                    @foreach(months() as $month_number => $month_name)
+                                                                        <option value="{{ $month_number }}">{{ $month_name }}</option>
+                                                                    @endforeach
                                                                 </select>
-                                                                <select>
+                                                                <select name="card_year" id="card_year" data-checkout="cardExpirationYear">
                                                                     <option>Ano</option>
+                                                                    @foreach(years() as $y)
+                                                                        <option value="{{ $y }}">{{ $y }}</option>
+                                                                    @endforeach
                                                                 </select>
-                                                                
+
                                                             </div>
                                                         </label>
                                                         <label>
                                                             <span>
                                                                Cód. de Segurança
                                                             </span>
-                                                            <input type="text">
+                                                            <input type="text" name="ccv" id="ccv" data-checkout="securityCode">
                                                         </label>
-                                                        <label class="select">
-                                                            <input type="checkbox"> <span>Salvar cartão para próxima compra</span>
-                                                        </label>
-                                                        <label class="select">
-                                                            <input type="checkbox"> <span>Tornar padrão para a próxima compra</span>
-                                                        </label>
+{{--                                                        <label class="select">--}}
+{{--                                                            <input type="checkbox"> <span>Salvar cartão para próxima compra</span>--}}
+{{--                                                        </label>--}}
+{{--                                                        <label class="select">--}}
+{{--                                                            <input type="checkbox"> <span>Tornar padrão para a próxima compra</span>--}}
+{{--                                                        </label>--}}
                                                     </div>
                                                 </label>
+
+                                                <input type="hidden" name="payment_method_id" id="payment_method_id" />
+                                                <input type="hidden" id="docType" data-checkout="docType" value="CPF" />
+                                                <input type="hidden" name="transaction_amount" id="transaction_amount" value="{{ cartTotal() }}" />
                                             </div>
                                         </label>
-                                        <label class="select">
-                                            <input name="pagamento" type="radio">
-                                            <strong>Bitcoin</strong>
-                                            <div class="info-label">
-                                                <p>
-                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
+{{--                                        <label class="select">--}}
+{{--                                            <input name="pagamento" type="radio">--}}
+{{--                                            <strong>Bitcoin</strong>--}}
+{{--                                            <div class="info-label">--}}
+{{--                                                <p>--}}
+{{--                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </label>--}}
                                         <em>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
                                         </em>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-checkout">
                             <div class="tabela">
                                 <h3>
@@ -583,50 +650,38 @@
                                 </h3>
                                 <div class="body-table">
                                     <table class="cart-m">
-                                        <tr>
+                                        @if(count($products) > 0)
+                                            @foreach($products as $product)
+                                                @php
+                                                    $p = product($product['product_id']);
+                                                @endphp
+                                                <tr>
                                             <td>
-                                                <img src="images/produto.jpg" alt="Nome do Produto">
+                                                <img src="{{ url('images/produto.jpg') }}" alt="Nome do Produto">
                                             </td>
                                             <td>
                                                 <strong>
-                                                    Nome do Produto(...)
+                                                    {{$p->name}}
                                                 </strong>
                                                 <span>
                                                     Tamanho: 100ml<br>
-                                                    Quantidade: 1
+                                                    Quantidade: {{$product['quantity']}}
                                                 </span>
                                             </td>
                                             <td>
                                                 <strong>
-                                                    R$ 124,56
+                                                    R$ {{money($p->price *  $product['quantity'])}}
                                                 </strong>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/produto.jpg" alt="Nome do Produto">
-                                            </td>
-                                            <td>
-                                                <strong>
-                                                    Nome do Produto(...)
-                                                </strong>
-                                                <span>
-                                                    Tamanho: 100ml<br>
-                                                    Quantidade: 1
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <strong>
-                                                    R$ 124,56
-                                                </strong>
-                                            </td>
-                                        </tr>
+                                            @endforeach
+                                        @endif
                                     </table>
 
                                     <h4>
                                         <i class="fa fa-ticket" aria-hidden="true"></i> Cupons e Vales
                                     </h4>
-                                    <form>
+                                    <div class="form-wrapper">
                                         <label class="ticket">
                                             <input type="text" placeholder="Cupom de Desconto">
                                             <button>OK</button>
@@ -635,7 +690,7 @@
                                             <input type="text" placeholder="Vale">
                                             <button>OK</button>
                                         </label>
-                                    </form>
+                                    </div>
                                     <h4>
                                         <i class="fa fa-dollar" aria-hidden="true"></i> Valores
                                     </h4>
@@ -645,7 +700,7 @@
                                                 Subtotal
                                             </td>
                                             <td>
-                                                R$320,00
+                                                R$ {{ money(cartTotal()) }}
                                             </td>
                                         </tr>
                                         <tr>
@@ -669,18 +724,18 @@
                                                 Total
                                             </td>
                                             <td>
-                                                R$320,00
+                                                R$ {{ money(cartTotal()) }}
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
 
-                            <a href="recibo.html" class="button-shop">
+                            <a href="javascript:void(0)" class="button-shop" id="submitCheckout">
                                 Finalizar Pedido
                             </a>
                         </div>
-                    </div>
+                    </form>
 
 
                 </div>

@@ -28,7 +28,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if(miniCart() == true)
+                    @if(count($products) > 0)
+
                     @foreach($products as $product)
                     @php
                     $p = product($product['product_id']);
@@ -50,7 +51,7 @@
                                     <div class="minus sign minus-sign">
                                         <i class="fa fa-minus" aria-hidden="true"></i>
                                     </div>
-                                    
+
                                 </span>
                             </td>
                             <td>
@@ -78,7 +79,7 @@
                 <form id='coupon' method='post' action='/insertcoupon'>
                     {{csrf_field()}}
                     <i class="fa fa-ticket" aria-hidden="true"></i>
-                    <input type="text" name='name' placeholder="Cupom de desconto"> 
+                    <input type="text" name='name' placeholder="Cupom de desconto">
                     <button type='submit'>OK</button> <span class='badge' id='couponResponse' style='display: none; padding-left: 7px;'></span>
                 </form>
 
@@ -152,8 +153,8 @@
                     <a href="{{ url('/checkout/pagamento') }}" title="Finalizar Pedido" class="btn">
                         Finalizar Pedido
                     </a>
-                   
-                    
+
+
                 </div>
             </div>
         </div>

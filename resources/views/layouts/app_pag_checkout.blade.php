@@ -38,7 +38,7 @@
             <li>
                 <a href="{{socialLink('facebook')}}" target="_blank" title="Facebook">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>    
+                </a>
             </li>
             <li>
                 <a href="{{socialLink('twitter')}}" target="_blank" title="Twitter">
@@ -68,7 +68,7 @@
                     A Plena Natura oferece frete grátis para as compras acima de R$99,90 com algumas excessões.<br><br>
                     Na página de pagamento você poderá ver se há ou não a opção de frete grátis de acordo com o CEP de entrega e os produtos escolhidos. <a href="fretes-e-prazos.html" target="_blank" title="Saiba mais">Saiba mais</a>
                 </p>
-                
+
             </div>
 
             <div class="frete-cart">
@@ -79,7 +79,7 @@
                     <thead>
                         <tr>
                             <td>
-                                
+
                             </td>
                             <td>
                                 Entrega em:
@@ -88,7 +88,7 @@
                                 Valor
                             </td>
                             <td>
-                                
+
                             </td>
                         </tr>
                     </thead>
@@ -176,7 +176,7 @@
                         <ul class="timeline">
                             <li class="checked">
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Carrinho
@@ -184,7 +184,7 @@
                             </li>
                             <li class="checked">
                                 <div class="item ">
-                                    
+
                                 </div>
                                 <span>
                                     Identificação
@@ -192,7 +192,7 @@
                             </li>
                             <li class="checked last">
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Checkout
@@ -200,7 +200,7 @@
                             </li>
                             <li>
                                 <div class="item">
-                                    
+
                                 </div>
                                 <span>
                                     Recibo
@@ -245,7 +245,7 @@
                                     <span>{{settings()->email}}</span>
                                 </a>
                             </p>
-                            
+
                             <div class="bottom">
                                 <a href="{{socialLink('facebook')}}" title="Facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -277,11 +277,15 @@
                         </div>
                     </div>
                 </div>
-            </section>            
+            </section>
         </footer>
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
-        <script type="text/javascript" src="{{asset('js/custom.js')}}">
+    <script type="text/javascript" src="{{asset('js/custom.js')}}">
         </script>
+    <script type="text/javascript" src="{{asset('js/checkout.js')}}">
+    </script>
 </body>
 
 </html>

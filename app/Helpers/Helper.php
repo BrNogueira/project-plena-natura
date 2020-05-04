@@ -57,7 +57,7 @@ function menuItens(){
 function getStamps(){
     return \App\Stamp::all();
 }
-//função buscar produtos no minicarrinho 
+//função buscar produtos no minicarrinho
 function miniCart() {
     if(cartCount() > 0)
     foreach($products as $product)
@@ -71,7 +71,7 @@ function cartCount(){
         $products = (object) unserialize(\Cookie::get('cart'));
         return is_array($products) ? count($products) : 0;
     }
-    var_dump($produts);
+
     exit;
 }
 

@@ -15,9 +15,7 @@
         "laravel/framework": "^5.8.0",
         "laravel/socialite": "^3.1",
         "laravel/tinker": "^1.0",
-        "mercadopago/dx-php": "^1.8",
-        "mercadopago/sdk": "^0.5.6",
-        "rodggall/mercadopago": "@dev",
+        "mercadopago/dx-php": "2.0.0",
         "socialiteproviders/instagram": "^3.0"
     },
     "require-dev": {
@@ -37,7 +35,8 @@
             "App\\": "app/"
         },
         "files": [
-            "app/Helpers/Helper.php"
+            "app/Helpers/Helper.php",
+            "app/Helpers/Checkout.php"
         ]
     },
     "autoload-dev": {

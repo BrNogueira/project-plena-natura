@@ -161,7 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
-        MercadoPagoLaravel\Providers\MercadoPagoServiceProvider::class,
+//        MercadoPagoLaravel\Providers\MercadoPagoServiceProvider::class,
 
     ],
 

@@ -371,7 +371,7 @@ ul.social-fixed li a i{
     right: 0;
 }
 .cover-all .banner-pop .close i{
-    color: #fff;    
+    color: #fff;
 }
 .cover-all .frete-cart .close{
     right: -4px;
@@ -566,7 +566,7 @@ form label input{
 .container-header h1{
     float: left;
     margin: 20px 0;
-}  
+}
 .container-header h1 img{
     height: 80px;
     /* Firefox */
@@ -578,7 +578,7 @@ form label input{
     /* Standard */
     transition: all 1s ease;
 }
- 
+
 .container-header .pad{
     position: relative;
 }
@@ -593,7 +593,7 @@ form label input{
     text-align: center;
     color: #666;
     font-size: 18px;
-    line-height: 30px; 
+    line-height: 30px;
     top: 45px;
     left: 180px;
     border-left: 1px solid rgba(111,134,75,0.2);
@@ -732,7 +732,7 @@ form label input{
     margin: 0 32px;
 }
 .container-header .mioloTop .links a:nth-child(3) i{
-    color: #34af23;    
+    color: #34af23;
 }
 .container-header .mioloTop .links a i{
     color: #cc2229;
@@ -850,16 +850,16 @@ form label input{
     background: #fff;
     width:360px;
     right: 0;
-    z-index: 1; top: 200%; visibility: hidden; opacity: 0; 
+    z-index: 1; top: 200%; visibility: hidden; opacity: 0;
      transition: opacity .2s ease 0s, top .2s ease 0s, height 0s linear .2s, visibility 0s linear .2s;
 }
 .container-header .shop.active .mini-shop-cart,
-.container-header .shop:hover .mini-shop-cart{ 
-    z-index: 2; 
-    top: calc(100% - 2px); 
-    visibility: visible; 
-    opacity: 1; 
-    overflow: visible; 
+.container-header .shop:hover .mini-shop-cart{
+    z-index: 2;
+    top: calc(100% - 2px);
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
     transition: opacity .5s ease 0s, top .5s ease 0s, height 0s linear 0s, visibility 0s linear 0s;
 }
 .container-header .shop .mini-shop-cart:after{
@@ -1030,15 +1030,15 @@ form label input{
     background: #fff;
     width:205px;
     left: 0;
-    z-index: 1; top: 200%; visibility: hidden; opacity: 0; 
+    z-index: 1; top: 200%; visibility: hidden; opacity: 0;
      transition: opacity .2s ease 0s, top .2s ease 0s, height 0s linear .2s, visibility 0s linear .2s;
 }
-.container-header .user:hover .mini-menu-user{ 
-    z-index: 2; 
-    top: calc(100% - 2px); 
-    visibility: visible; 
-    opacity: 1; 
-    overflow: visible; 
+.container-header .user:hover .mini-menu-user{
+    z-index: 2;
+    top: calc(100% - 2px);
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
     transition: opacity .5s ease 0s, top .5s ease 0s, height 0s linear 0s, visibility 0s linear 0s;
 }
 .container-header .user .mini-menu-user:after{
@@ -1111,17 +1111,17 @@ form label input{
     width: calc(50% - 550px);
     height: 40px;
     background: #cc2229;
-    float: left;    
+    float: left;
 }
 .container-menu{
     height: 40px;
-    background: #fd9f17; 
+    background: #fd9f17;
 }
 .container-menu .rgt{
     width: calc(50% - 550px);
     height: 40px;
     background: #fd9f17;
-    float: right;    
+    float: right;
 }
 .container-menu nav,
 .container-menu nav ul{
@@ -1320,7 +1320,7 @@ form label input{
     width: 644px;
     left: 0;
 
-     z-index: 1; top: 200%; visibility: hidden; opacity: 0; 
+     z-index: 1; top: 200%; visibility: hidden; opacity: 0;
      transition: opacity .2s ease 0s, top .2s ease 0s, height 0s linear .2s, visibility 0s linear .2s;
 }
 
@@ -1385,22 +1385,22 @@ form label input{
 
 
 .container-menu nav ul li.casa .sub{
-   
+
     left: auto;
     right: 0;
 }
 .container-menu nav ul li.casa .sub:after{
-    
+
     left: auto;
     right: 30px;
 }
 
-.container-menu nav ul li:hover .sub{ 
-    z-index: 2; 
-    top: calc(100% - 2px); 
-    visibility: visible; 
-    opacity: 1; 
-    overflow: visible; 
+.container-menu nav ul li:hover .sub{
+    z-index: 2;
+    top: calc(100% - 2px);
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
     transition: opacity .5s ease 0s, top .5s ease 0s, height 0s linear 0s, visibility 0s linear 0s;
 }
 
@@ -1631,14 +1631,14 @@ form label input{
     float: left;
     width: 100%;
     text-align: center;
-    color:#003b57; 
+    color:#003b57;
     font-weight: normal;
     margin-top: 10px;
 }
 .container-miolo .banners-destaque-top li span{
     font-size: 14px;
     line-height: 16px;
-    color:#003b57; 
+    color:#003b57;
     float: left;
     width: 100%;
     text-align: center;
@@ -1702,8 +1702,8 @@ form label input{
 
 .container-miolo.marcas article.list-prods .filter-ico i,
 .container-miolo article.list-marcas .pad h2 i,
-.container-miolo.marcas article.list-prods .pad h2 i, 
-.container-miolo.marcas aside.filter .pad > h2 i, 
+.container-miolo.marcas article.list-prods .pad h2 i,
+.container-miolo.marcas aside.filter .pad > h2 i,
 .container-miolo.marcas aside.filter .pad > strong i,
 .container-miolo .marcas.vitrine h2 i{
     color: #cc2229;
@@ -1713,8 +1713,8 @@ form label input{
 }
 
 .container-miolo.saude article.list-prods .filter-ico i,
-.container-miolo.saude article.list-prods .pad h2 i, 
-.container-miolo.saude aside.filter .pad > h2 i, 
+.container-miolo.saude article.list-prods .pad h2 i,
+.container-miolo.saude aside.filter .pad > h2 i,
 .container-miolo.saude aside.filter .pad > strong i,
 .container-miolo .saude.vitrine h2 i{
     color: #6f864b;
@@ -1724,8 +1724,8 @@ form label input{
 }
 
 .container-miolo.cabelos article.list-prods .filter-ico i,
-.container-miolo.cabelos article.list-prods .pad h2 i, 
-.container-miolo.cabelos aside.filter .pad > h2 i, 
+.container-miolo.cabelos article.list-prods .pad h2 i,
+.container-miolo.cabelos aside.filter .pad > h2 i,
 .container-miolo.cabelos aside.filter .pad > strong i,
 .container-miolo .cabelos.vitrine h2 i{
     color: #54b714;
@@ -1735,8 +1735,8 @@ form label input{
 }
 
 .container-miolo.rosto article.list-prods .filter-ico i,
-.container-miolo.rosto article.list-prods .pad h2 i, 
-.container-miolo.rosto aside.filter .pad > h2 i, 
+.container-miolo.rosto article.list-prods .pad h2 i,
+.container-miolo.rosto aside.filter .pad > h2 i,
 .container-miolo.rosto aside.filter .pad > strong i,
 .container-miolo .rosto.vitrine h2 i{
     color: #93c758;
@@ -1746,8 +1746,8 @@ form label input{
 }
 
 .container-miolo.corpo article.list-prods .filter-ico i,
-.container-miolo.corpo article.list-prods .pad h2 i, 
-.container-miolo.corpo aside.filter .pad > h2 i, 
+.container-miolo.corpo article.list-prods .pad h2 i,
+.container-miolo.corpo aside.filter .pad > h2 i,
 .container-miolo.corpo aside.filter .pad > strong i,
 .container-miolo .corpo.vitrine h2 i{
     color: #0099ff;
@@ -1757,8 +1757,8 @@ form label input{
 }
 
 .container-miolo.maos article.list-prods .filter-ico i,
-.container-miolo.maos article.list-prods .pad h2 i, 
-.container-miolo.maos aside.filter .pad > h2 i, 
+.container-miolo.maos article.list-prods .pad h2 i,
+.container-miolo.maos aside.filter .pad > h2 i,
 .container-miolo.maos aside.filter .pad > strong i,
 .container-miolo .maos.vitrine h2 i{
     color: #0e6d98;
@@ -1768,8 +1768,8 @@ form label input{
 }
 
 .container-miolo.organicos article.list-prods .filter-ico i,
-.container-miolo.organicos article.list-prods .pad h2 i, 
-.container-miolo.organicos aside.filter .pad > h2 i, 
+.container-miolo.organicos article.list-prods .pad h2 i,
+.container-miolo.organicos aside.filter .pad > h2 i,
 .container-miolo.organicos aside.filter .pad > strong i,
 .container-miolo .organicos.vitrine h2 i{
     color: #003b57;
@@ -1779,8 +1779,8 @@ form label input{
 }
 
 .container-miolo.materias-primas article.list-prods .filter-ico i,
-.container-miolo.materias-primas article.list-prods .pad h2 i, 
-.container-miolo.materias-primas aside.filter .pad > h2 i, 
+.container-miolo.materias-primas article.list-prods .pad h2 i,
+.container-miolo.materias-primas aside.filter .pad > h2 i,
 .container-miolo.materias-primas aside.filter .pad > strong i,
 .container-miolo .materias-primas.vitrine h2 i{
     color: #144859;
@@ -1791,8 +1791,8 @@ form label input{
 
 
 .container-miolo.casa article.list-prods .filter-ico i,
-.container-miolo.casa article.list-prods .pad h2 i, 
-.container-miolo.casa aside.filter .pad > h2 i, 
+.container-miolo.casa article.list-prods .pad h2 i,
+.container-miolo.casa aside.filter .pad > h2 i,
 .container-miolo.casa aside.filter .pad > strong i,
 .container-miolo .casa.vitrine h2 i{
     color: #666666;
@@ -1802,8 +1802,8 @@ form label input{
 }
 
 .container-miolo.veganos article.list-prods .filter-ico i,
-.container-miolo.veganos article.list-prods .pad h2 i, 
-.container-miolo.veganos aside.filter .pad > h2 i, 
+.container-miolo.veganos article.list-prods .pad h2 i,
+.container-miolo.veganos aside.filter .pad > h2 i,
 .container-miolo.veganos aside.filter .pad > strong i,
 .container-miolo .veganos.vitrine h2 i{
     color: #93c758;
@@ -1813,8 +1813,8 @@ form label input{
 }
 
 .container-miolo.oferta article.list-prods .filter-ico i,
-.container-miolo.oferta article.list-prods .pad h2 i, 
-.container-miolo.oferta aside.filter .pad > h2 i, 
+.container-miolo.oferta article.list-prods .pad h2 i,
+.container-miolo.oferta aside.filter .pad > h2 i,
 .container-miolo.oferta aside.filter .pad > strong i,
 .container-miolo .oferta.vitrine h2 i{
     color: #fd9f17;
@@ -1828,8 +1828,8 @@ form label input{
 
 
 .container-miolo.pet article.list-prods .filter-ico i,
-.container-miolo.pet article.list-prods .pad h2 i, 
-.container-miolo.pet aside.filter .pad > h2 i, 
+.container-miolo.pet article.list-prods .pad h2 i,
+.container-miolo.pet aside.filter .pad > h2 i,
 .container-miolo.pet aside.filter .pad > strong i,
 .container-miolo .pet.vitrine h2 i{
     color: #63ca20;
@@ -1955,7 +1955,7 @@ footer .col h3{
 }
 .container-top-footer .col h3 i{
     font-size: 18px;
-    color: #fff;    
+    color: #fff;
 }
 footer .col ul,
 footer .col p{
@@ -2025,7 +2025,7 @@ footer .col ul li:before{
     -o-transition: all 0.4s ease;
     /* Standard */
     transition: all 0.4s ease;
-}   
+}
 footer .col ul li:hover::before{
     left: 4px;
     opacity: 0.6;
@@ -2133,7 +2133,7 @@ footer .container-bot-footer .bottom a:last-child{
     color: #666;
     font-size: 14px;
     display: inline-block;
-    margin:0 10px; 
+    margin:0 10px;
 }
 .titulo-produto ul li:first-child::before{
     display: none;
@@ -2295,7 +2295,7 @@ footer .container-bot-footer .bottom a:last-child{
 }
 .produto-display .side-info .preco .descontos strong{
     font-weight: normal;
-    font-family: 'josefin_sansbold';    
+    font-family: 'josefin_sansbold';
 }
 .produto-display .side-info .bg-wrap{
     float: left;
@@ -2316,7 +2316,7 @@ footer .container-bot-footer .bottom a:last-child{
     margin: 15px 35px 10px;
     line-height: 40px;
     font-weight: normal;
-    font-family: 'josefin_sansbold';  
+    font-family: 'josefin_sansbold';
     text-align: center;
 }
 .produto-display .side-info .bg-wrap a.button:hover{
@@ -2400,7 +2400,7 @@ footer .container-bot-footer .bottom a:last-child{
     float: right;
     border-left: 1px solid #666;
     font-weight: normal;
-    font-family: 'josefin_sansbold';  
+    font-family: 'josefin_sansbold';
     cursor: pointer;
     text-align: right;
 }
@@ -2413,8 +2413,8 @@ footer .container-bot-footer .bottom a:last-child{
     text-transform: uppercase;
     padding: 0 10px;
     font-weight: normal;
-    font-family: 'josefin_sansbold'; 
-    border-bottom: 1px solid #ebebeb; 
+    font-family: 'josefin_sansbold';
+    border-bottom: 1px solid #ebebeb;
 }
 .produto-display .side-info .bg-wrap.size > strong i{
     font-size: 18px;
@@ -2501,7 +2501,7 @@ footer .container-bot-footer .bottom a:last-child{
 }
 .tabs ul.buttons li a.active{
     background: #fff;
-    position: relative; 
+    position: relative;
     color: #000;
 }
 .tabs ul.buttons li a.active:after{
@@ -2571,7 +2571,7 @@ footer .container-bot-footer .bottom a:last-child{
     width: 100%;
     font-size: 24px;
     font-weight: normal;
-    font-family: 'josefin_sansbold'; 
+    font-family: 'josefin_sansbold';
 }
 .produto-infos .aval .nota{
     line-height: 40px;
@@ -2579,11 +2579,11 @@ footer .container-bot-footer .bottom a:last-child{
     font-size: 18px;
     margin-top: 30px;
     font-weight: normal;
-    font-family: 'josefin_sansbold'; 
+    font-family: 'josefin_sansbold';
 }
 .produto-infos .aval .nota span{
     font-weight: normal;
-    font-family: 'josefin_sans'; 
+    font-family: 'josefin_sans';
     font-size: 14px;
 
 }
@@ -2605,7 +2605,7 @@ footer .container-bot-footer .bottom a:last-child{
     float: left;
     width: 100%;
     font-weight: normal;
-    font-family: 'josefin_sansbold'; 
+    font-family: 'josefin_sansbold';
     font-size: 18px;
 
 }
@@ -2774,7 +2774,7 @@ article.list-prods form select,
     width: calc(100% - 70px);
     height: 30px;
     padding: 0 10px;
-    line-height: 30px;  
+    line-height: 30px;
 }
 .user-area article .pedido{
     position: relative;
@@ -2818,8 +2818,8 @@ article.list-prods form select,
 .user-area article .pedido .col span{
     float: left;
     width: 100%;
-    text-align: center;   
-    line-height: 20px; 
+    text-align: center;
+    line-height: 20px;
 }
 .user-area article .pedido .col > strong{
     float: left;
@@ -2860,7 +2860,7 @@ article.list-prods form select,
 }
 .user-area article .pedido.aval .col ul li i{
     color: #fd9f17;
-    font-size: 20px;    
+    font-size: 20px;
 }
 .user-area article .pedido .col > strong i{
     font-size: 64px;
@@ -3047,7 +3047,7 @@ article.list-prods form select,
 
 }
 .user-area article .meus-enderecos ul li:last-child:hover{
-    border-color: #fd9f17;    
+    border-color: #fd9f17;
 }
 .user-area article .meus-enderecos ul li:last-child a:hover{
     background: rgba(253,159,23,0.1);
@@ -3279,7 +3279,7 @@ article.form-atendimento form button:hover,
     margin-right: 5px;
 }
 .cover-all .tabs ul.buttons li a.active i{
-    color: #fd9f17;   
+    color: #fd9f17;
 }
 .cover-all .tabs ul.info li p:last-child{
     margin-bottom: 0;
@@ -3733,7 +3733,7 @@ margin-top: 10px;
 }
 
 .container-miolo .cart .cadastroForm .btn-entrada {
-    height: 40px; 
+    height: 40px;
     line-height: 40px;
     text-align: center;
     color: #fff;
@@ -3767,7 +3767,7 @@ margin-top: 10px;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .container-miolo .cart .entregaForm .btn-frete {
-    height: 40px; 
+    height: 40px;
     line-height: 40px;
     text-align: center;
     color: #fff;
@@ -4149,7 +4149,7 @@ margin-top: 10px;
     left: 0;
     top: 0;
     right: 0;
-    padding: 20px;    
+    padding: 20px;
     bottom: 0;
 }
 .cart > .warn div ul{
@@ -4220,8 +4220,8 @@ margin-top: 10px;
 .cart .col-checkout .tabela .body-table > strong,
 .cart .col-checkout .tabela .body-table > p,
 .cart .col-checkout .tabela .body-table > p strong,
-.cart .col-checkout .tabela .body-table form,
-.cart .col-checkout .tabela .body-table form label,
+.cart .col-checkout .tabela .body-table .form-wrapper,
+.cart .col-checkout .tabela .body-table .form-wrapper label,
 .cart .col-checkout .tabela .body-table > p a{
     float: left;
     width: 100%;
@@ -4235,12 +4235,12 @@ margin-top: 10px;
     background: #fafafa;
     padding: 0 20px;
 }
-.cart .col-checkout .tabela .body-table form .endereco-entrega-new.off,
-.cart .col-checkout .tabela .body-table form.editAdressLog.off,
+.cart .col-checkout .tabela .body-table .form-wrapper .endereco-entrega-new.off,
+.cart .col-checkout .tabela .body-table .form-wrapper.editAdressLog.off,
 .cart .col-checkout .tabela .body-table > .adressCheckoutLog.off{
     display: none;
 }
-.cart .col-checkout .tabela .body-table form.editAdressLog,
+.cart .col-checkout .tabela .body-table .form-wrapper.editAdressLog,
 .cart .col-checkout .tabela .body-table > p{
     margin-bottom: 20px;
 }
@@ -4255,17 +4255,17 @@ margin-top: 10px;
 .cart .col-checkout .tabela .body-table > p a:hover{
     text-decoration: none;
 }
-.cart .col-checkout .tabela .body-table form label{
+.cart .col-checkout .tabela .body-table .form-wrapper label{
     margin-top: 8px;
     margin-bottom: 0;
 }
-.cart .col-checkout .tabela .body-table form label span,
-.cart .col-checkout .tabela .body-table form label strong{
+.cart .col-checkout .tabela .body-table .form-wrapper label span,
+.cart .col-checkout .tabela .body-table .form-wrapper label strong{
     width: 85px;
     height: 30px;
     line-height: 30px;
 }
-.cart .col-checkout .tabela .body-table form label input{
+.cart .col-checkout .tabela .body-table .form-wrapper label input{
     height: 30px;
     float: right;
     line-height: 30px;
@@ -4273,21 +4273,21 @@ margin-top: 10px;
     margin: 0;
     width: calc(100% - 90px);
 }
-.cart .col-checkout .tabela .body-table form label.select input{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select input{
     float: left;
     width: 15px;
     border:0;
 }
-.cart .col-checkout .tabela .body-table form.endereco-entrega-logged-in label.select{
+.cart .col-checkout .tabela .body-table .form-wrapper.endereco-entrega-logged-in label.select{
     margin-top: 0;
 }
-.cart .col-checkout .tabela .body-table form.endereco-entrega-logged-in label.select span{
+.cart .col-checkout .tabela .body-table .form-wrapper.endereco-entrega-logged-in label.select span{
     width: calc(100% - 20px);
     float: right;
 }
 
 .cart .col-checkout > strong,
-.cart .col-checkout .tabela .body-table form label strong{
+.cart .col-checkout .tabela .body-table .form-wrapper label strong{
     font-family: 'josefin_sansbold';
     font-weight: normal;
     float: left;
@@ -4296,36 +4296,36 @@ margin-top: 10px;
     width: 110px;
     margin-left: 8px;
 }
-.cart .col-checkout .tabela .body-table form label.select span:nth-last-child(2){
+.cart .col-checkout .tabela .body-table .form-wrapper label.select span:nth-last-child(2){
     float: right;
     width: 70px;
     text-align: right;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label{
     display: none;
     padding-bottom: 15px;
     border-bottom: 1px solid #ebebeb;
 }
-.cart .col-checkout .tabela .body-table form label.select.open .info-label{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select.open .info-label{
     display: block;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label,
-.cart .col-checkout .tabela .body-table form label.select .info-label p,
-.cart .col-checkout .tabela .body-table form label.select .info-label ul,
-.cart .col-checkout .tabela .body-table form label.select .info-label ul li{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label p,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul li{
     float: left;
     width: 100%;
     margin: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul li{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul li{
     position: relative;
     padding-left: 7px;
     margin-top: 5px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul li:first-child{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul li:first-child{
     margin-top: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul li:after{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul li:after{
     content: '';
     width: 4px;
     height: 4px;
@@ -4336,25 +4336,25 @@ margin-top: 10px;
     top: 4px;
     opacity: 0.3;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul li{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul li{
     font-size: 12px;
-    line-height: 14px;    
+    line-height: 14px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul,
-.cart .col-checkout .tabela .body-table form label.select .info-label p{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label p{
     padding-left: 23px;
     font-size: 12px;
     line-height: 14px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label ul:nth-child(2){
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label ul:nth-child(2){
     margin-top: 8px;
 }
-.cart .col-checkout .tabela .body-table form em a{
+.cart .col-checkout .tabela .body-table .form-wrapper em a{
     font-size: 12px;
     line-height: 14px;
-    text-decoration: underline;    
+    text-decoration: underline;
 }
-.cart .col-checkout .tabela .body-table form em{
+.cart .col-checkout .tabela .body-table .form-wrapper em{
     float: left;
     width: 100%;
     font-size: 12px;
@@ -4479,84 +4479,84 @@ margin-top: 10px;
     text-decoration: none;
     margin-top: 10px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select{
     margin: 0;
     padding-left: 5px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select img{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select img{
     float: left;
     width: 33px;
     height: 20px;
     margin: 5px 3px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select span:nth-last-child(2){
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select span:nth-last-child(2){
     float: left;
     padding: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select span{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select span{
     text-align: left;
     overflow: hidden;
     font-size: 11px;
-    width: calc(50% - 27px);    
+    width: calc(50% - 27px);
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select span:last-child{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select span:last-child{
     text-align: right;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros > span{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros > span{
     width: calc(100% - 20px);
     float: right;
     text-align: left;
     font-size: 14px;
 }
 
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form{
     float: left;
     width: 100%;
     display: none;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form.open{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form.open{
     display: block;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label:first-child{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label:first-child{
     margin-top: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label{
     margin: 0;
     padding-left: 15px;
     margin-top: 6px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label.select{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label.select{
     margin: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label.select input{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label.select input{
     float: left;
     width: 15px;
     height: 30px;
     line-height: 30px;
     border:0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label.select span{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label.select span{
     width: calc(100% - 20px);
     float: right;
     font-size: 12px;
     text-align: left !important;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form span{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form span{
         width: 85px;
     height: 30px;
     line-height: 30px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form span.l2{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form span.l2{
     line-height: 12px;
     padding: 3px 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form span small{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form span small{
     font-size: 80%;
     line-height: 12px;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form .fl,
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form select,
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form input{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form .fl,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form select,
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form input{
     height: 30px;
     float: right;
     line-height: 30px;
@@ -4568,18 +4568,18 @@ margin-top: 10px;
     padding: 0 5px;
     margin-top: 0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form .fl{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form .fl{
     padding: 0;
     border:0;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form label span sup{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form label span sup{
     font-size: 70%;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form .fl select{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form .fl select{
     width: 48%;
     float: left;
 }
-.cart .col-checkout .tabela .body-table form label.select .info-label label.select.outros .form .fl select:last-child{
+.cart .col-checkout .tabela .body-table .form-wrapper label.select .info-label label.select.outros .form .fl select:last-child{
     float: right;
 }
 .container-value{
@@ -4744,7 +4744,7 @@ aside.filter ul.filt-options li{
 .filter.filter-mob ul.filt-options li b,
 aside.filter ul.filt-options li b{
     font-family: 'josefin_sansbold';
-    font-weight: normal;    
+    font-weight: normal;
     line-height: 20px;
 }
 .filter.filter-mob .pad form,
@@ -4762,7 +4762,7 @@ aside.filter .pad form strong{
     height: 30px;
     line-height: 30px;
     font-family: 'josefin_sansbold';
-    font-weight: normal;  
+    font-weight: normal;
     border-bottom: 1px solid #f6f6f6;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -5209,9 +5209,9 @@ article.form-atendimento h3,
 }
 .info-central .txt ol li strong{
     font-family: 'josefin_sansbold';
-    font-weight: normal;   
+    font-weight: normal;
     display: inline-block;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     float: right;
     width: calc(100% - 15px);
 }
@@ -5241,7 +5241,7 @@ ul.icons-items-central li strong{
     color: #6f864b;
     font-size: 22px;
     font-family: 'josefin_sansbold';
-    font-weight: normal;   
+    font-weight: normal;
 }
 ul.icons-items-central li strong i{
     float: left;
@@ -5461,7 +5461,7 @@ article.list-prods .filter-ico,
         font-size: 12px;
     }
 
-    .container-menu nav ul li:hover .sub{ 
+    .container-menu nav ul li:hover .sub{
         display: none;
             left: calc(50% - 322px) !important;
     }
@@ -5601,7 +5601,7 @@ article.list-prods .filter-ico,
         margin-top: 0;
     }
     aside.filter .pad{
-        padding: 15px;        
+        padding: 15px;
     }
 
     .filter.filter-mob .pad > strong,.filter.filter-mob .pad > h2,
@@ -5656,7 +5656,7 @@ article.list-prods .filter-ico,
         width: 70px;
         padding: 0 5px;
         font-size: 12px;
-    } 
+    }
     article.list-marcas .pad, article.list-prods .pad{
         padding: 15px;
     }
@@ -6149,7 +6149,7 @@ article.list-prods .filter-ico,
     .container-header .user i.fa-angle-down,
     .container-header .user i {
         line-height: 60px;
-    
+
     }
     .margin-top{
         margin-top: 60px;
@@ -6460,7 +6460,7 @@ article.list-prods .filter-ico,
         margin-top: 15px;
         height: 30px;
     }
-    article.list-marcas .list-flt label, 
+    article.list-marcas .list-flt label,
     article.list-prods .list-flt label{
         width: calc(100% - 150px);
         margin-right: 5px;

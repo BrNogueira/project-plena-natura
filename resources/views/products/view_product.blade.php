@@ -8,16 +8,16 @@
                 <div class="produto-infos">
                     <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                     <h2>
-                        {{$product->name}} 
+                        {{$product->name}}
                     </h2>
                     <a href="carrinho.html" class="button">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
                     <span class="value">
-                        R${{money($product->price)}} 
+                        R${{money($product->price)}}
                     </span>
-                </div>                
-            </div>            
+                </div>
+            </div>
         </section>
 
         <!-- MIOLO -->
@@ -39,12 +39,12 @@
                             </li>
                             <li>
                                 <span>
-                                    {{$product->name}} 
+                                    {{$product->name}}
                                 </span>
                             </li>
                         </ul>
                         <h2>
-                            {{$product->name}} 
+                            {{$product->name}}
                         </h2>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         </div>
 
                         <div class="bg-wrap">
-                          <form action='/cart' id='buyNowForm'  method='post'>  
+                          <form action='/cart' id='buyNowForm'  method='post'>
                              {{ csrf_field() }}
                           <input type='hidden' value='{{$product->id}}' name='product_id'>
                              <a type='submit' id='buyNow' href='#' class="button">
@@ -244,7 +244,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -257,7 +257,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -270,7 +270,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -283,7 +283,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -296,7 +296,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -309,7 +309,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -322,7 +322,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -335,7 +335,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend mauris. Nulla id lectus rutrum, finibus tellus sit amet, consequat felis. Sed fringilla fermentum leo vel euismod. Cras convallis id enim eu malesuada. Vestibulum ultrices augue est, vel rhoncus lorem tristique sed. Vivamus ultricies commodo tellus eu facilisis. Nullam faucibus ipsum nibh, ut molestie orci elementum in. Sed sed venenatis libero. Cras at suscipit elit. Praesent sed pulvinar tortor.
                                     </p>
                                     <p>
-                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis. 
+                                        Integer in pretium metus. Pellentesque molestie justo id massa placerat pharetra. Nullam facilisis purus vitae tellus gravida ullamcorper. Quisque vitae scelerisque tellus. Proin at mollis lacus. Nulla est justo, interdum vel lectus eget, aliquet sollicitudin diam. Morbi ut efficitur neque. Sed ultricies, diam ac convallis posuere, turpis ligula tincidunt metus, non cursus leo odio vel lorem. Aliquam libero ligula, pretium non ante vel, elementum pharetra magna. Nunc placerat mi et eros congue, lobortis volutpat libero pellentesque. Praesent efficitur pulvinar finibus. Maecenas vulputate enim eget ex consectetur semper. Donec lobortis felis at turpis suscipit facilisis.
                                     </p>
                                 </div>
                             </li>
@@ -350,7 +350,7 @@
                     </div>
                     <div class="pad owl-vitrine">
                         <a href="produto.html" title="Nome do Produto" class="produto">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -369,7 +369,7 @@
                             </div>
                         </a>
                         <a href="produto.html" title="Nome do Produto" class="produto">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -388,7 +388,7 @@
                             </div>
                         </a>
                         <a href="produto.html" title="Nome do Produto" class="produto">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -407,7 +407,7 @@
                             </div>
                         </a>
                         <a href="produto.html" title="Nome do Produto" class="produto">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -426,7 +426,7 @@
                             </div>
                         </a>
                         <a href="produto.html" title="Nome do Produto" class="produto unavailable">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -445,7 +445,7 @@
                             </div>
                         </a>
                         <a href="produto.html" title="Nome do Produto" class="produto unavailable">
-                            
+
                             <img src="{{asset('images/produto.jpg')}}" alt="Nome do Produto">
                             <strong>
                                 Arte dos Aromas - Sabonete Facial Esfoliante Copaiba Orgânico 110ml
@@ -524,7 +524,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="comment">
                             <strong>
                                 Amei!
@@ -686,7 +686,7 @@
                         </li>
                     </ul>
                 </div>
-            
+
         </div>
 
 
@@ -699,7 +699,7 @@
                 <thead>
                     <tr>
                         <td>
-                            
+
                         </td>
                         <td>
                             Entrega em:
@@ -708,7 +708,7 @@
                             Valor
                         </td>
                         <td>
-                            
+
                         </td>
                     </tr>
                 </thead>
@@ -800,7 +800,7 @@
                 <thead>
                     <tr>
                         <td>
-                            
+
                         </td>
                         <td>
                             Entrega em:
@@ -809,7 +809,7 @@
                             Valor
                         </td>
                         <td>
-                            
+
                         </td>
                     </tr>
                 </thead>
