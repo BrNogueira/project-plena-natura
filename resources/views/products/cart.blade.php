@@ -1,6 +1,7 @@
 @extends('layouts.app_pag')
 
 @section('content')
+
 <section class="container-miolo margin-top scrolled">
     <div class="wrapper">
         <div id="loader"></div>
@@ -91,6 +92,7 @@
                             Calcular valor do frete:
                         </span>
                         <input name='cep' type="text" placeholder="CEP">
+                        <input type="hidden" name="products_id" value="{{ $products_id }}">
                         <button  id="frete-table">OK</button>
                         <span  class='badge loader' id='freteResponse' style='display: none; padding-left: 7px;'></span>
                     </form>

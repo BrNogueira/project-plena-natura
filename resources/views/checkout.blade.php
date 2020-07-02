@@ -296,51 +296,57 @@
                                     <div class="form-wrapper">
                                         <label>
                                             <span>
+                                                CEP
+                                            </span>
+                                            <input name="shipping_zipcode" type="text">
+                                        </label>
+                                        <label>
+                                            <span>
                                                 Rua
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_street" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Número
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_number" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Complemento
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_address2" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Bairro
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_neighborhood" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Cidade
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_city" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Estado
                                             </span>
-                                            <input type="text">
+                                            <input name="shipping_state" type="text">
                                         </label>
                                         <label>
                                             <span>
                                                 Telefone
                                             </span>
-                                            <input type="text" name="phone" id="phone">
+                                            <input type="text" name="shipping_phone" id="phone">
                                         </label>
                                         <label>
                                             <span>
                                                 Celular
                                             </span>
-                                            <input type="text" name="cel" id="cel">
+                                            <input type="text" name="shipping_cellphone" id="cel">
                                         </label>
                                     </div>
                                 </div>

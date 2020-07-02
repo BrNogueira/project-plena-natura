@@ -54,6 +54,19 @@ const checkout = {
         this.data.installments = $("#installments").val();
         this.data._token = $('meta[name="csrf-token"]').attr('content');
 
+        // Shipping
+        this.data.shipping = {};
+
+        this.data.shipping.zipcode = $('input[name="shipping_zipcode"]').val();
+        this.data.shipping.street = $('input[name="shipping_street"]').val();
+        this.data.shipping.number = $('input[name="shipping_number"]').val();
+        this.data.shipping.address2 = $('input[name="shipping_address2"]').val();
+        this.data.shipping.neighborhood = $('input[name="shipping_neighborhood"]').val();
+        this.data.shipping.city = $('input[name="shipping_city"]').val();
+        this.data.shipping.state = $('input[name="shipping_state"]').val();
+        this.data.shipping.phone = $('input[name="shipping_phone"]').val();
+        this.data.shipping.cellphone = $('input[name="shipping_cellphone"]').val();
+
     },
     guessPaymentMethod: function (event) {
         let cardnumber = $("#card_number").val();
@@ -122,6 +135,9 @@ const checkout = {
             checkout.pay();
 
         }
+    },
+    calculateShipping: function() {
+        
     }
 }
 

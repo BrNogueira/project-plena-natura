@@ -26,40 +26,9 @@ class PaymentController extends Controller
     public function submitPayment(Request $request)
     {
 
-//        MercadoPago\SDK::setClientId("YOUR_CLIENT_ID");
-//        MercadoPago\SDK::setClientSecret("YOUR_CLIENT_SECRET");
 
-//        MercadoPago\SDK::setAccessToken('TEST-4439526933134066-050319-fcd0ce70dd048f53bf0681c2fcb862f7-179181908');
-
-//        $cart = unserialize(\Cookie::get('cart'));
-//        foreach($cart as $product => $p){
-//            $item = $p;
-//        }
-//        $product = Product::find($item['product_id']);
-        // dd($product);
-
-//        $preference_data = [
-//            "items" => [
-//                [
-//                "id" => $item["product_id"],
-//                "title" => $product->name,
-//                "description" => $product->description,
-//                "picture_url" => null,//aguardando ajuste posterior
-//                "quantity" => $item["quantity"],
-//                "currency_id" => 'R$',
-//                "unit_price" => $product->price
-//                ]
-//            ],
-//            "payer" => [
-//                "email" => "robert.rquadros@gmail.com",//\Auth::user()->email
-//            ]
-//        ];
-//        $preference = MP::post("/checkout/preferences",$preference_data);
-//        return dd($preference);
-
-
-        MercadoPago\SDK::setAccessToken("APP_USR-2196376508113415-081623-a61193f9d5ca9503569d20003c454c3a_LA_LD_-42899968");
-        $payment = new MercadoPago\Payment();
+        \MercadoPago\SDK::setAccessToken("APP_USR-2196376508113415-081623-a61193f9d5ca9503569d20003c454c3a_LA_LD_-42899968");
+        $payment = new \MercadoPago\Payment();
 
         try {
             $payment->__set('transaction_amount', cartTotal());
@@ -93,4 +62,17 @@ class PaymentController extends Controller
             ]);
         }
     }
+
+    public function createOrder()
+    {
+
+    }
+
+    public function createUser()
+    {
+
+    }
+
+    public function createUserAddress()
+    {}
 }

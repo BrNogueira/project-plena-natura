@@ -5,17 +5,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cart;
 use App\Coupon;
+use FlyingLuscas\Correios\Client;
+use FlyingLuscas\Correios\Service;
 
 class CartController extends Controller
 {
-    public function index(){
+    public function index(Request $request)
+    {
+        $products_ids = [];
 
         if(\Auth::guest()){
-//            $data['products'] = (object) unserialize(\Cookie::get('cart'));
             $data['products'] = unserialize(\Cookie::get('cart'));
         }else{
             $data['products'] = Cart::where('user_id', \Auth::id())->get();
         }
+
+        foreach ( $data['products'] as $key => $product ) {
+            $products_ids[] = $product['product_id'];
+        }
+
+        $data['products_id'] = implode(',', $products_ids);
+
+
         return view('products.cart', $data);
     }
 
@@ -88,31 +99,88 @@ class CartController extends Controller
             return response()->json(array("success" => false));
         }
     }
+    // public function getDeadline(Request $request){
+    //     $cepOrigem  = '13058-971';
+    //     $cepDestino = $request->cep;
+    //     $curl = curl_init();
+
+    //     curl_setopt_array($curl, array(
+    //         CURLOPT_HTTPHEADER => array(
+    //             'Content-Type: application/json',
+    //             'x-api-key:  YKmJ1ImOOF2SxLNGNFvIS3KBWf8jUCTgGmt9zKg7',
+    //         ),
+    //         CURLOPT_URL => "https://api.kcep.run/".$cepOrigem."/".$cepDestino."/16/11/2/1" ,
+    //         CURLOPT_RETURNTRANSFER => true,
+    //         CURLOPT_ENCODING => "",
+    //         CURLOPT_TIMEOUT => 30000,
+    //         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    //         CURLOPT_CUSTOMREQUEST => "GET",
+    //     ));
+    //     $response = curl_exec($curl);
+    //     $err = curl_error($curl);
+    //     curl_close($curl);
+
+    //     return $response;
+    // }
+    // 
+    
     public function getDeadline(Request $request){
-        $cepOrigem  = '13058-971';
-        $cepDestino = $request->cep;
-        $curl = curl_init();
+        
+        if (isset($request->product_id)) {
+            $product = \App\Product::find($request->product_id);
 
-        curl_setopt_array($curl, array(
-            CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'x-api-key:  YKmJ1ImOOF2SxLNGNFvIS3KBWf8jUCTgGmt9zKg7',
-            ),
-            CURLOPT_URL => "https://api.kcep.run/".$cepOrigem."/".$cepDestino."/16/11/2/1" ,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_TIMEOUT => 30000,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-        ));
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-        curl_close($curl);
+            $response = $this->getProductShipping($product, $request->cep);
 
-        return $response;
+            return $response;
+        } elseif (isset($request->products_id)) {
+            $products_ids = explode(',', $request->products_id);
+
+            if (count($products_ids) == 1) {
+                $product = \App\Product::find($products_ids[0]);
+
+                $response = $this->getProductShipping($product, $request->cep);
+
+                return $response;
+            } else {
+                $products = [];
+
+                foreach ($products_ids as $key => $product_id) {
+                    $products[] = \App\Product::find($product_id);
+                }
+
+                $response = $this->getProductShipping($products, $request->cep);
+            }
+
+            return $response;
+        }
+
+        return false;
     }
 
-    public function setDeadline(Request $request){
+    public function getProductShipping($product, $destination)
+    {
+        $origin = '13058-971';
+        $correios = new Client;
+
+        $freight = $correios->freight()
+            ->origin($origin)
+            ->destination($destination)
+            ->services(Service::SEDEX, Service::PAC, Service::SEDEX_10);
+
+        // largura, altura, comprimento, peso e quantidade
+        if (is_object($product)) {
+            $freight->item($product->width, $product->heigth, $product->length, $product->weight, 1);
+        } else {
+            foreach ($product as $p) {
+                $freight = $freight->item($p->width, $p->heigth, $p->length, $p->weight, 1);
+            }
+        }
+
+        return $freight->calculate();       
+    }
+
+    public function setDeadline(Request $request)
+    {
         if($request->has('frete_type')){
             session()->put('frete', $request->frete_type);
             $data['success'] = true;

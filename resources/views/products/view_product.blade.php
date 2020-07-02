@@ -101,7 +101,7 @@
                         <div class="preco preco-cartao">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
                             <strong>
-                                R$132,32
+                                R$ {{ money($product->price) }}
                             </strong>
                             <div class="descontos">
                                 no cartão em até 12x de <strong>R$32,32</strong> ou em <strong>3x sem juros</strong>
@@ -127,6 +127,7 @@
                                     <i class="fa fa-truck" aria-hidden="true"></i> Calcule o frete:
                                 </span>
                                 <input name='cep' type="text" placeholder="CEP">
+                                <input name='product_id' type="hidden" value="{{ $product->id }}">
                                 <button id="frete-table">OK</button>
                            </form>
                             <center>

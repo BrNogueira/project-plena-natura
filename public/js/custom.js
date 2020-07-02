@@ -182,14 +182,14 @@ $(function() {
         
         
         var ScrollTop = parseInt($(window).scrollTop());
-        var alturaValue = $('#value-area').offset().top;
+        // var alturaValue = $('#value-area').offset().top;
         var alturaValueFooter = ($('footer').offset().top) - 200;
         
-        if (ScrollTop > alturaValue) {
-            $('.container-value').addClass('fixed');
-        } else {
-            $('.container-value').removeClass('fixed');
-        }
+        // if (ScrollTop > alturaValue) {
+        //     $('.container-value').addClass('fixed');
+        // } else {
+        //     $('.container-value').removeClass('fixed');
+        // }
         if (ScrollTop > alturaValueFooter) {
             $('.container-value').removeClass('fixed');
         } else {
@@ -276,40 +276,45 @@ $(function() {
         event.preventDefault();
         var sendData = $('#frete').serialize();
         $.post($('#frete').attr('action'),  sendData , function(data){
-            newData = JSON.parse(data);
+            // newData = JSON.parse(data);
+            console.log(data);
+            console.log(data[1]['price']);
+
             // Pac
-            if(newData.data[2]['Valor'] != '0,00' || newData.data[0]['Valor'] != '0,00' || newData.data[5]['Valor'] != '0,00'){
+            if(data[1]['price'] != 0 || data[0]['price'] != 0){
+                console.log('ehre');
                 if($('#subtotal').data('value') > 100){
                     $('#pac').show();
-                    $('#prazo-entrega-pac').html(newData.data[2]['PrazoEntrega'] + ' dia(s)');
+                    $('#prazo-entrega-pac').html(data[1]['deadline'] + ' dia(s)');
                     $('#preco-pac').html('Grátis');
                     $('#label-pac').html('Grátis');
                     $('#pacRadio').val('0.00');
-                }else if(newData.data[2]['Valor'] != '0'){
+                }else if(data[1]['price'] != 0){
+                    console.log('ehre2');
                     $('#pac').show();
-                    $('#prazo-entrega-pac').html(newData.data[2]['PrazoEntrega'] + ' dia(s)');
-                    $('#preco-pac').html('R$' +newData.data[2]['Valor'] );
-                    $('#pacRadio').val(newData.data[2]['Valor']);
+                    $('#prazo-entrega-pac').html(data[1]['deadline'] + ' dia(s)');
+                    $('#preco-pac').html('R$' +data[1]['price'] );
+                    $('#pacRadio').val(data[1]['price']);
                 }else{
                     $('#pac').hide();
                 }
                 
                 // Sedex
-                if(newData.data[0]['Valor'] != '0'){
+                if(data[0]['price'] != 0){
                     $('#sedex').show();
-                    $('#prazo-entrega-sedex').html(newData.data[0]['PrazoEntrega'] + ' dia(s)');
-                    $('#preco-sedex').html('R$' +newData.data[0]['Valor'] );
-                    $('#sedexRadio').val(newData.data[0]['Valor']);
+                    $('#prazo-entrega-sedex').html(data[0]['deadline'] + ' dia(s)');
+                    $('#preco-sedex').html('R$' +data[0]['price'] );
+                    $('#sedexRadio').val(data[0]['price']);
                 }else{
                     $('#sedex').hide();
                 }
                 
-                // Sedex10
-                if(newData.data[5]['Valor'] != '0'){
+                Sedex10
+                if(data[2]['price'] != '0'){
                     $('#sedex10').show();
-                    $('#prazo-entrega-sedex10').html(newData.data[5]['PrazoEntrega'] + ' dia(s)');
-                    $('#preco-sedex10').html('R$' +newData.data[5]['Valor'] );
-                    $('#s10Radio').val(newData.data[5]['Valor']);
+                    $('#prazo-entrega-sedex10').html(data[2]['deadline'] + ' dia(s)');
+                    $('#preco-sedex10').html('R$' +data[2]['price'] );
+                    $('#s10Radio').val(newData.data[2]['price']);
                 }else{
                     $('#sedex10').hide();
                 }
