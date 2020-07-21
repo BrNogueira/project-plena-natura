@@ -384,23 +384,15 @@
                                     <div class="col">
                                         <ul>
                                             <li class="title">
-                                                <a href="#" title="Sub Categoria">Sub Categoria</a>
+                                            <a href="lista-marcas" title="Marcas">Marcas</a>
                                             </li>
-                                            <li>
-                                                <a href="#" title="Subsub Categoria">Subsub Categoria</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Subsub Categoria">Subsub Categoria</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Subsub Categoria">Subsub Categoria</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Subsub Categoria">Subsub Categoria</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Subsub Categoria">Subsub Categoria</a>
-                                            </li>
+                                            @foreach (getFooterRnd() as $rnd )
+                                                <li>
+                                                    <a href="/produto/{{$rnd->slug}}" title="Sub Categoria">
+                                                        {{$rnd->name}}
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
 
 
@@ -472,7 +464,7 @@
                                     <div class="col2">
                                         <a href="marcas" title="Marcas - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/marcas.jpg" alt="Marcas - Clique e confira nossa linha">
+                                                <img src="{{url('images/marcas.jpg')}}" alt="Marcas - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -583,7 +575,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Saúde - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/saude.jpg" alt="Saúde - Clique e confira nossa linha">
+                                                <img src="{{url('images/saude.jpg')}}" alt="Saúde - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -694,7 +686,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Cabelos - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/cabelos.jpg" alt="Cabelos - Clique e confira nossa linha">
+                                                <img src="{{url('images/cabelos.jpg')}}" alt="Cabelos - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -805,7 +797,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Rosto - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/rosto.jpg" alt="Rosto - Clique e confira nossa linha">
+                                                <img src="{{url('images/rosto.jpg')}}" alt="Rosto - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -916,7 +908,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Corpo - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/corpo.jpg" alt="Corpo - Clique e confira nossa linha">
+                                                <img src="{{url('images/corpo.jpg')}}" alt="Corpo - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1027,7 +1019,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Mãos - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/maos-e-unhas-menu.jpg" alt="Mãos - Clique e confira nossa linha">
+                                                <img src="{{url('images/maos-e-unhas-menu.jpg')}}" alt="Mãos - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1138,7 +1130,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Orgânicos - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/organicos.jpg" alt="Orgânicos - Clique e confira nossa linha">
+                                                <img src="{{url('images/organicos.jpg')}}" alt="Orgânicos - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1249,7 +1241,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Matérias-Primas - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/materias-primas.jpg" alt="Matérias-Primas - Clique e confira nossa linha">
+                                                <img src="{{url('images/materias-primas.jpg')}}" alt="Matérias-Primas - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1360,7 +1352,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Casa - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/casa.jpg" alt="Casa - Clique e confira nossa linha">
+                                                <img src="{{url('images/casa.jpg')}}" alt="Casa - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1471,7 +1463,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Veganos - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/veganos.jpg" alt="Veganos - Clique e confira nossa linha">
+                                                <img src="{{url('images/veganos.jpg')}}" alt="Veganos - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
@@ -1582,7 +1574,7 @@
                                     <div class="col2">
                                         <a href="lista-categoria" title="Pet - Clique e confira nossa linha">
                                             <figure>
-                                                <img src="images/pet.jpg" alt="Pet - Clique e confira nossa linha">
+                                                <img src="{{url('images/pet.jpg')}}" alt="Pet - Clique e confira nossa linha">
                                             </figure>
                                             <div class="tx">
                                                 <strong>
