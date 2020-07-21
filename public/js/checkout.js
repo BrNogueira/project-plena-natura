@@ -3,7 +3,7 @@ const checkout = {
     canSubmit: false,
 
     init: function () {
-        window.Mercadopago.setPublishableKey("APP_USR-1afc3c5b-3d40-4240-b0af-1500ef71902b");
+        window.Mercadopago.setPublishableKey("TEST-d9f0fb40-8750-466e-a3f4-c0adce62137f");
 
         $('#card_number').on('keyup', this.guessPaymentMethod);
         $('#card_number').on('change', this.guessPaymentMethod);
@@ -110,16 +110,19 @@ const checkout = {
         });
     },
     sdkResponseHandler: function(status, response) {
-        if (status != 200 && status != 201) {
-            if(response.status === 400) {
-                alert("Por favor, atualize a página e tente novamente.");
-            } else {
-                alert("Por favor, verifique os dados preenchidos.");
-            }
 
-            this.canSubmit = false;
-            return false;
-        } else {
+        // console.log(status, response);
+
+        // if (status != 200 && status != 201) {
+        //     if(response.status === 400) {
+        //         alert("Por favor, atualize a página e tente novamente.");
+        //     } else {
+        //         alert("Por favor, verifique os dados preenchidos.");
+        //     }
+
+        //     this.canSubmit = false;
+        //     return false;
+        // } else {
             var form = document.querySelector('#pay');
             var card = document.createElement('input');
             card.setAttribute('name', 'token');
@@ -134,7 +137,7 @@ const checkout = {
             checkout.setupData();
             checkout.pay();
 
-        }
+        // }
     },
     calculateShipping: function() {
         

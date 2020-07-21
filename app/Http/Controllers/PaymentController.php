@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use \MercadoPago;
 use App\Cart;
+use App\User;
+use App\Order;
 
 class PaymentController extends Controller
 {
@@ -27,7 +29,7 @@ class PaymentController extends Controller
     {
 
 
-        \MercadoPago\SDK::setAccessToken("APP_USR-2196376508113415-081623-a61193f9d5ca9503569d20003c454c3a_LA_LD_-42899968");
+        \MercadoPago\SDK::setAccessToken("TEST-4439526933134066-050319-fcd0ce70dd048f53bf0681c2fcb862f7-179181908");
         $payment = new \MercadoPago\Payment();
 
         try {
@@ -43,10 +45,23 @@ class PaymentController extends Controller
 
             $payment->save();
 
+            // return $payment->cause;
+
             if (property_exists($payment, 'status')) {
+                
+                // After payment, let's create the user if nessessary
+                // if (condition) {
+                    # code...
+                // }
+                $user = $this->getUser( $request );
+
+                $order = $this->createOrder( $request, $payment, $user );
+                
+
                 return response()->json([
                     'success' => true,
-                    'status' => $payment->status
+                    'status' => $payment,
+                    'user' => $user
                 ]);
             } else {
                 return response()->json([
@@ -63,14 +78,67 @@ class PaymentController extends Controller
         }
     }
 
-    public function createOrder()
+    public function createOrder($request, $payment, $user)
     {
+
+        $sub_total = cartTotal();
+        
+        
+        try {
+            return Order::create([
+                'shipping_zipcode' => $request->shipping_zipcode,
+                'shipping_street' => $request->shipping_street,
+                'shipping_address2' => $request->shipping_address2,
+                'shipping_number' => $request->shipping_number,
+                'shipping_city' => $request->shipping_city,
+                'shipping_state' => $request->shipping_state,
+                'shipping_shipping_type' => '',
+                'installments' => $request->installments,
+                'payment_method' => 'credit_card',
+                'payment_gateway' => 'Mercado Pago',
+                'shipping_total' => '',
+                'coupon' => 0,
+                'sub_total' => '',
+                'total' => '',
+                'order_status_id' => '',
+                'user_id' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+        } catch (\Exeption $e) {
+            return false;
+        }
+    }
+
+    public function createOrderItems($order) {
 
     }
 
-    public function createUser()
+    public function getUser($request)
     {
+        if (\Auth::check()) {
+            return \Auth::user();
+        } else {
+            return $this->createUser($request);
+        }
+    }
 
+    public function createUser($request)
+    {
+        $birthday = str_replace('/', '-', $request->birth_date);
+
+        return User::create([
+            'email' => $request->email,
+            'password' => \Hash::make($request->password),
+            'name' => $request->first_name,
+            'lastname' => $request->last_name,
+            'provider' => 'cod',
+            'cpf' => $request->cpf,
+            'phone' => $request->shipping_cellphone,
+            'type' => 'fisica',
+            'birthday' => date('Y-m-d', strtotime($birthday)),
+            'home_phone' => $request->phone
+        ]);
     }
 
     public function createUserAddress()

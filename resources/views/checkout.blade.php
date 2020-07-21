@@ -161,7 +161,7 @@
                 <div class="wrapper">
                     <div class="pad">
                         <h1>
-                            <a href="{{url('index.php')}}" title="Plena Natura - Cosméticos Naturais">
+                            <a href="{{url('/')}}" title="Plena Natura - Cosméticos Naturais">
                                 <img src="{{url('images/plena-natura-cosmeticos-naturais.jpg')}}" alt="Plena Natura - Cosméticos Naturais">
                             </a>
                         </h1>
@@ -218,6 +218,11 @@
         <section class="container-miolo margin-top scrolled">
             <div class="wrapper">
                 <div class="cart">
+
+                    <div class="div">
+                        <p class="alert alert-danger">Erro ao fazer pagamento, entre em contato com o suporte</p>
+                    </div>
+
                     <h2>
                         Endereço e pagamento
                     </h2>
@@ -663,7 +668,7 @@
                                                 @endphp
                                                 <tr>
                                             <td>
-                                                <img src="{{ url('images/produto.jpg') }}" alt="Nome do Produto">
+                                                <img src="{{ $p->thumbnail() }}" alt="Nome do Produto">
                                             </td>
                                             <td>
                                                 <strong>
@@ -714,7 +719,7 @@
                                                 Descontos
                                             </td>
                                             <td>
-                                                - R$3,00
+                                                R$ <span id="total_discount">0,00</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -722,7 +727,7 @@
                                                 Entrega
                                             </td>
                                             <td>
-                                                R$0,00
+                                                R$ <span id="shipping_total">0,00</span>
                                             </td>
                                         </tr>
                                         <tr>

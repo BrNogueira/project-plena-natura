@@ -68,7 +68,7 @@ function cartCount(){
     if(\Auth::check()){
         return \App\Cart::where('user_id', \Auth::id())->get()->count();
     }else{
-        $products = (object) unserialize(\Cookie::get('cart'));
+        $products = unserialize(\Cookie::get('cart'));
         return is_array($products) ? count($products) : 0;
     }
 
@@ -76,11 +76,15 @@ function cartCount(){
 }
 
 function getCart(){
-    if($products > 0){
-        return (object) unserialize(\Cookie::get('cart'));
+    $products = [];
+
+    if(\Auth::guest()){
+        $products = unserialize(\Cookie::get('cart'));
     }else{
-        return \App\Cart::where('user_id', \Auth::id())->get();
+        $products = Cart::where('user_id', \Auth::id())->get();
     }
+
+    return $products;
 }
 
 function checkModule($module){

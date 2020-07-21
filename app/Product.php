@@ -11,4 +11,13 @@ class Product extends Model
     // static function item($id){
     //     return DB::table('products')->where('id', $id)->first();
     // }
+
+
+  public function thumbnail() {
+    if ($this->thumbanil) {
+      return asset('storage/products/' . $this->thumbnail);
+    } else {
+      return asset('images/product-placeholder.png');
+    }
+  }
 }

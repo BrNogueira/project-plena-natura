@@ -226,7 +226,7 @@
                 <div class="wrapper">
                     <div class="pad">
                         <h1>
-                            <a href="#" title="Plena Natura - Cosméticos Naturais">
+                            <a href="{{ url('/') }}" title="Plena Natura - Cosméticos Naturais">
                                 <img src="images/plena-natura-cosmeticos-naturais.jpg" alt="Plena Natura - Cosméticos Naturais">
                             </a>
                         </h1>
@@ -242,7 +242,7 @@
                             @if(cartCount() > 0)
 
                             <div class="items">
-                            {{cartCount()}}
+                            {{cartCount()}} 
                                 </div>
                             @endif
                             <div class="mini-shop-cart">
@@ -251,38 +251,23 @@
                                 @foreach(getCart() as $cartItem)
                                 @php
                                 $p = product($cartItem['product_id']);
-                                $total = $p->price;
+
+                                $total = $p->price * $cartItem['quantity'];
                                 @endphp
-                                    <li data-id='{{$p->id}}'>
-                                        <img src="{{asset('$p->image')}}" alt="Nome do Produto">
-                                        <div class="desc">
-                                            <strong>{{substr($p->name, 0, 15)}}</strong>
-                                            <span>
-                                                Tamanho:100ml<br>
-                                                Quantidade:1
-                                            </span>
-                                        </div>
-                                        <div class="remove">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="value">
-                                        R${{money($p->price)}}
-                                        </div>
-                                    </li>
                                     <li>
-                                        <img src="{{asset('$p->image')}}" alt="Nome do Produto">
+                                        <img src="{{ $p->thumbnail() }}" alt="Nome do Produto">
                                         <div class="desc">
-                                            <strong>Powerfit Ômega (...)</strong>
+                                            <strong>{{ $p->name }}</strong>
                                             <span>
                                                 Tamanho:100ml<br>
-                                                Quantidade:1
+                                                Quantidade: {{ $cartItem['quantity'] }}
                                             </span>
                                         </div>
                                         <div class="remove">
                                             <i class="fa fa-times" aria-hidden="true"></i>
                                         </div>
                                         <div class="value">
-                                            R$101,20
+                                            R$ {{ money( $total ) }}
                                         </div>
                                     </li>
                                     @endforeach
@@ -296,7 +281,7 @@
                                 <strong>
                                     Subtotal <span>R${{money($total)}}</span>
                                 </strong>
-                                <a href="url('/carrinho')" class="button-shop" title="Finalizar Compra">
+                                <a href="{{ url('/carrinho') }}" class="button-shop" title="Finalizar Compra">
                                     Finalizar Comprar
                                 </a>
                             </div>

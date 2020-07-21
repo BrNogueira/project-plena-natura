@@ -54,6 +54,43 @@ class ProductsController extends Controller
       $product->stock = is_numeric($request->stock) ? $request->stock : 0 ;
       $product->description = $request->description ? $request->description : '';
 
+      // Upload image
+      // Upload images
+      // Define o valor default para a variável que contém o nome da imagem
+      $nameFile = '';
+
+      dd($request);
+
+      // Verifica se informou o arquivo e se é válido
+      if ($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()) {
+
+        // Define um aleatório para o arquivo baseado no timestamps atual
+        $name = uniqid(date('HisYmd'));
+
+        // Recupera a extensão do arquivo
+        $extension = $request->thumbnail->extension();
+
+        // Define finalmente o nome
+        $nameFile = "{$name}.{$extension}";
+
+        // Faz o upload:
+        $upload = $request->thumbnail->storeAs('products', $nameFile);
+
+        dd($upload);
+
+
+        // Verifica se NÃO deu certo o upload (Redireciona de volta)
+//            if ( !$upload )
+//                return redirect()
+//                    ->back()
+//                    ->with('error', 'Falha ao fazer upload')
+//                    ->withInput();
+
+      }
+
+
+      $product->thumbnail = $nameFile;
+
       if($product->save()){
         $data['success'] = true;
         $data['msg']     = 'Produto cadastrado com sucesso!';
@@ -111,6 +148,40 @@ class ProductsController extends Controller
       $product->length = number_format(is_numeric($request->length) ? $request->length : 0.00 ,2, '.', '');
       $product->stock = is_numeric($request->stock) ? $request->stock : 0 ;
       $product->description = $request->description ? $request->description : '';
+
+      // Upload image
+      // Upload images
+      // Define o valor default para a variável que contém o nome da imagem
+      $nameFile = '';
+
+      // Verifica se informou o arquivo e se é válido
+      if ($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()) {
+
+        // Define um aleatório para o arquivo baseado no timestamps atual
+        // $name = $request->thumbnail->hashName();
+        $nameFile = $request->thumbnail->hashName();
+
+        // Recupera a extensão do arquivo
+        // $extension = $request->thumbnail->extension();
+
+        // Define finalmente o nome
+        // $nameFile = "{$name}.{$extension}";
+
+        // Faz o upload:
+        $upload = $request->thumbnail->storeAs('products', $nameFile);
+
+
+        // Verifica se NÃO deu certo o upload (Redireciona de volta)
+//            if ( !$upload )
+//                return redirect()
+//                    ->back()
+//                    ->with('error', 'Falha ao fazer upload')
+//                    ->withInput();
+
+      }
+
+
+      $product->thumbnail = $nameFile;
 
       if($product->save()){
         $data['success'] = true;

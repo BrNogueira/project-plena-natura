@@ -30,6 +30,7 @@ class AddFeaturesToProductTable extends Migration
             $table->boolean('active')->default(1);
             $table->date('expires_at')->after('active')->nullable();
             $table->integer('brand_id');
+            $table->text('thumbnail');
         });
     }
 
