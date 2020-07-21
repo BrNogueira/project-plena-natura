@@ -394,6 +394,36 @@
                                                 </li>
                                             @endforeach
                                         </ul>
+                                        <div class="col">
+                                            <ul>
+                                                <li class="title">
+                                                <a href="lista-marcas" title="Marcas">Marcas</a>
+                                                </li>
+                                                @foreach (getFooterRnd(0,5) as $rnd )
+                                                    <li>
+                                                        <a href="/produto/{{$rnd->slug}}" title="Sub Categoria">
+                                                            {{$rnd->name}}
+                                                        </a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+
+                                            <ul>
+                                                <li class="title">
+                                                <a href="lista-marcas" title="Marcas">Marcas</a>
+                                                </li>
+                                                @foreach (getFooterRnd(0,5) as $rnd )
+                                                    <li>
+                                                        <a href="/produto/{{$rnd->slug}}" title="Sub Categoria">
+                                                            {{$rnd->name}}
+                                                        </a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        <div class="col">
                                         <ul>
                                             <li class="title">
                                             <a href="lista-marcas" title="Marcas">Marcas</a>
@@ -406,31 +436,9 @@
                                                 </li>
                                             @endforeach
                                         </ul>
-                                        <ul>
-                                            <li class="title">
-                                            <a href="lista-marcas" title="Marcas">Marcas</a>
-                                            </li>
-                                            @foreach (getFooterRnd(0,5) as $rnd )
-                                                <li>
-                                                    <a href="/produto/{{$rnd->slug}}" title="Sub Categoria">
-                                                        {{$rnd->name}}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                        <ul>
-                                            <li class="title">
-                                            <a href="lista-marcas" title="Marcas">Marcas</a>
-                                            </li>
-                                            @foreach (getFooterRnd(0,5) as $rnd )
-                                                <li>
-                                                    <a href="/produto/{{$rnd->slug}}" title="Sub Categoria">
-                                                        {{$rnd->name}}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
+                                        </div>
                                     </div>
+
                                     <div class="col2">
                                         <a href="marcas" title="Marcas - Clique e confira nossa linha">
                                             <figure>
