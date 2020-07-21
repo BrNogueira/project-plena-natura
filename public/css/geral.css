@@ -1669,7 +1669,7 @@ form label input{
 
 .container-miolo .marcas-carrousel .cliente img{
     border: none;
-    width: 100%;
+    width: 100% !important;
 }
 
 .container-miolo .marcas-carrousel .pad{
