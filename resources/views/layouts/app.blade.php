@@ -440,8 +440,6 @@
                                                 <a href="#" title="Subsub Categoria">Subsub Categoria</a>
                                             </li>
                                         </ul>
-                                        <div class="col">
-
                                         <ul>
                                             <li class="title">
                                                 <a href="#" title="Sub Categoria">Sub Categoria</a>
@@ -462,7 +460,6 @@
                                                 <a href="#" title="Subsub Categoria">Subsub Categoria</a>
                                             </li>
                                         </ul>
-                                    </div>
                                     <div class="col">
                                         <ul>
                                             <li class="title">
