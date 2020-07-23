@@ -65,92 +65,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <span>
-                                    Grátis
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    23 a 26 - jan
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    R$0,00
-                                </span>
-                            </td>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                        </tr>
 
+                        {{-- @dd($shippiments); --}}
 
-                        <tr>
-                            <td>
-                                <span>
-                                    Econômico
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    16 a 23 - jan
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    R$6,66
-                                </span>
-                            </td>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>
-                                <span>
-                                    Expresso
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    12 a 16 - jan
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    R$8,88
-                                </span>
-                            </td>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>
-                                <span>
-                                    Ultra-Expresso
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    10 a 12 - jan
-                                </span>
-                            </td>
-                            <td>
-                                <span>
-                                    R$11,10
-                                </span>
-                            </td>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                        </tr>
+                        @if(count($shippiments) > 0)
+                            @foreach($shippiments as $shippiment)
+                                <tr>
+                                    <td>
+                                        <span>
+                                            {{ $shippiment->name }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span>
+                                            {{ $shippiment->deadline }} dias
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span>
+                                            R$ {{ money($shippiment->price) }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>
@@ -366,67 +307,28 @@
                                 </h3>
                                 <div class="body-table">
                                     <div class="form-wrapper">
-                                        <label class="select">
-                                            <input name="frete" type="radio">
-                                            <strong>Grátis</strong>
-                                            <span>
-                                                23 a 24 - jan
-                                            </span>
-                                            <span>
-                                                R$0,00
-                                            </span>
+                                        @if(count($shippiments) > 0)
+                                            @foreach($shippiments as $shippiment)
+                                                @if($shippiment->price != 0)
+                                                    <label class="select">
+                                                        <input name="frete" type="radio">
+                                                        <strong>{{ $shippiment->name }}</strong>
+                                                        <span>
+                                                            {{ $shippiment->deadline }} dias
+                                                        </span>
+                                                        <span>
+                                                            R${{ money($shippiment->price) }}
+                                                        </span>
 
-                                            <div class="info-label">
-                                                <p>
-                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="frete" type="radio">
-                                            <strong>Econômico</strong>
-                                            <span>
-                                                16 a 23 - jan
-                                            </span>
-                                            <span>
-                                                R$6,66
-                                            </span>
-                                            <div class="info-label">
-                                                <p>
-                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="frete" type="radio">
-                                            <strong>Expresso</strong>
-                                            <span>
-                                                12 a 16 - jan
-                                            </span>
-                                            <span>
-                                                R$8,88
-                                            </span>
-                                            <div class="info-label">
-                                                <p>
-                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
-                                        <label class="select">
-                                            <input name="frete" type="radio">
-                                            <strong>Ultra-Expresso</strong>
-                                            <span>
-                                                10 a 12 - jan
-                                            </span>
-                                            <span>
-                                                R$10,10
-                                            </span>
-                                            <div class="info-label">
-                                                <p>
-                                                    O pedido será liberado somente após a aprovação do pagamento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae diam sit amet tellus imperdiet .
-                                                </p>
-                                            </div>
-                                        </label>
+                                                        <div class="info-label">
+                                                            <p>
+                                                                O pedido será liberado somente após a aprovação do pagamento.
+                                                            </p>
+                                                        </div>
+                                                    </label>
+                                                @endif
+                                            @endforeach
+                                        @endif
                                         <em>
                                             Frete grátis: Compras acima de R$ 99,90. <a href="#" id="rule">Confira a regra.</a><br><br>
                                             O pedido será liberado somente após a aprovação do pagamento

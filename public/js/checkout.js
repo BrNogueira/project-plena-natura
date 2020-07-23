@@ -34,7 +34,9 @@ const checkout = {
             dataType: 'json',
             data: this.data,
             success: function (response) {
-                console.log(response);
+                if (response.success) {
+                    window.location.href = response.return_url;
+                }
             },
             error: function (response) {
                 console.log(response);

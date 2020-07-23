@@ -9,12 +9,15 @@ use \MercadoPago;
 use App\Cart;
 use App\User;
 use App\Order;
+use App\OrderItem;
 
 class PaymentController extends Controller
 {
 
     public function showCheckoutForm(Request $request)
     {
+        $data['shippiments'] = isset($_COOKIE['shippiments']) ? json_decode($_COOKIE['shippiments']) : [];
+
         if(\Auth::guest()){
 //            $data['products'] = (object) unserialize(\Cookie::get('cart'));
             $data['products'] = unserialize(\Cookie::get('cart'));
@@ -58,11 +61,18 @@ class PaymentController extends Controller
                 $order = $this->createOrder( $request, $payment, $user );
                 
 
-                return response()->json([
-                    'success' => true,
-                    'status' => $payment,
-                    'user' => $user
-                ]);
+                if ($order) {
+                    return response()->json([
+                        'success' => true,
+                        'return_url' => url('/recibo/?order=' . $order->id),
+                    ]);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'errors' => $payment
+                    ]);
+                }
+                
             } else {
                 return response()->json([
                     'success' => false,
@@ -85,7 +95,7 @@ class PaymentController extends Controller
         
         
         try {
-            return Order::create([
+            $order = Order::create([
                 'shipping_zipcode' => $request->shipping_zipcode,
                 'shipping_street' => $request->shipping_street,
                 'shipping_address2' => $request->shipping_address2,
@@ -105,13 +115,35 @@ class PaymentController extends Controller
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ]);
+
+            $this->createOrderItems($order);
         } catch (\Exeption $e) {
             return false;
         }
     }
 
     public function createOrderItems($order) {
+        $products = [];
 
+        if(\Auth::guest()){
+            $products = unserialize(\Cookie::get('cart'));
+        }else{
+            $products = Cart::where('user_id', \Auth::id())->get();
+        }
+
+        if (count($products) > 0) {
+            foreach ($products as $key => $product) {
+                $p = product($product['product_id']);
+
+                OrderItem::create([
+                    'order_id' => $order->id,
+                    'product_id' => $product->id,
+                    'price' => $p->price,
+                    'quantity' => $product['quantity'],
+                    'total' => $p->price *  $product['quantity']
+                ]);
+            }
+        }
     }
 
     public function getUser($request)

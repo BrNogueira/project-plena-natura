@@ -277,12 +277,14 @@ $(function() {
         var sendData = $('#frete').serialize();
         $.post($('#frete').attr('action'),  sendData , function(data){
             // newData = JSON.parse(data);
-            console.log(data);
-            console.log(data[1]['price']);
+            // console.log(data);
+            // console.log(data[1]['price']);
+            // 
+            setCookie('shippiments', JSON.stringify(data), 1);
 
             // Pac
             if(data[1]['price'] != 0 || data[0]['price'] != 0){
-                console.log('ehre');
+                // console.log('ehre');
                 if($('#subtotal').data('value') > 100){
                     $('#pac').show();
                     $('#prazo-entrega-pac').html(data[1]['deadline'] + ' dia(s)');
@@ -290,7 +292,7 @@ $(function() {
                     $('#label-pac').html('Grátis');
                     $('#pacRadio').val('0.00');
                 }else if(data[1]['price'] != 0){
-                    console.log('ehre2');
+                    // console.log('ehre2');
                     $('#pac').show();
                     $('#prazo-entrega-pac').html(data[1]['deadline'] + ' dia(s)');
                     $('#preco-pac').html('R$' +data[1]['price'] );
@@ -309,7 +311,7 @@ $(function() {
                     $('#sedex').hide();
                 }
                 
-                Sedex10
+                // Sedex10
                 if(data[2]['price'] != '0'){
                     $('#sedex10').show();
                     $('#prazo-entrega-sedex10').html(data[2]['deadline'] + ' dia(s)');
@@ -326,7 +328,18 @@ $(function() {
             getCartPrices();
         });
     });
-    
+
+
+    function setCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+        
     
     $(document).delegate('a#mais-formas', 'click', function(event) {
         event.preventDefault();
